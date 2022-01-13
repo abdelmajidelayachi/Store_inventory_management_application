@@ -64,16 +64,93 @@
     <div class="nav-container disktop">
       <ul>
         <li><a href="index.php">Accueil</a></li>
-        <li class="current"><a href="#">catégorie</a></li>
+        <li class="current"><a href="#">Catégorie</a></li>
         <li><a href="#">Indisponible produit</a></li>
         <li><a href="report.php">Rapport</a></li>
       </ul>
     </div>
   </header>
   <main>
-  <!-- write code here   -->
-  
-
+    <!-- write code here   -->
+    <div class="bar-container">
+      <ul>
+        <li class="current-cat"><a href="#">Toutes</a></li>
+        <li><a href="#">Machine a laver</a></li>
+        <li><a href="#">Télévision</a></li>
+        <li><a href="#">Machine a coudre</a></li>
+        <li><a href="#">Machine a vaisselle</a></li>
+        <li><a href="#">Four electrique</a></li>
+        <li><a href="#">Machine à café</a></li>
+        <li><a href="#">Réfrigérateur</a></li>
+        <li><a href="#">Inspirateur</a></li>
+      </ul>
+    </div>
+    <div class="category" id="caty1">
+      <div class="produit" id="produit1">
+        <img src="./Image/tv/tv1.jpg" alt="tv"><br><br>
+        <p>Factory Direst Sales Aucma 536L ...</p><br>
+        <h3><span id="tv1-price"> 10 000.00</span> DH</h3><br>
+        <p><span id="tv1-num">32</span> pieces</p>
+      </div>
+      <div class="produit" id="produit2">
+        <img src="./Image/tv/tv2.jpg" alt="tv"><br><br>
+        <p>Factory Direst Sales Aucma 536L ...</p><br>
+        <h3><span id="tv2-price"> 10 000.00</span> DH</h3><br>
+        <p><span id="tv2-num">32</span> pieces</p>
+      </div>
+      <div class="produit" id="produit3">
+        <img src="./Image/tv/tv1.jpg" alt="tv"><br><br>
+        <p>Factory Direst Sales Aucma 536L ...</p><br>
+        <h3><span id="tv3-price"> 10 000.00</span> DH</h3><br>
+        <p><span id="tv3-num">32</span> pieces</p>
+      </div>
+      <div class="produit" id="produit4">
+        <img src="./Image/tv/tv2.jpg" alt="tv"><br><br>
+        <p>Factory Direst Sales Aucma 536L ...</p><br>
+        <h3><span id="tv4-price"> 10 000.00</span> DH</h3><br>
+        <p><span id="tv4-num">32</span> pieces</p>
+      </div>
+      <div class="produit" id="produit5">
+        <img src="./Image/tv/tv1.jpg" alt="tv"><br><br>
+        <p>Factory Direst Sales Aucma 536L ...</p><br>
+        <h3><span id="tv5-price"> 10 000.00</span> DH</h3><br>
+        <p><span id="tv5-num">32</span> pieces</p>
+      </div>
+    </div>
+    <br><br>
+    <div class="category" id="caty1">
+      <div class="produit" id="produit1">
+        <img src="./Image/tv/tv1.jpg" alt="tv"><br><br>
+        <p>Factory Direst Sales Aucma 536L ...</p><br>
+        <h3><span id="tv1-price"> 10 000.00</span> DH</h3><br>
+        <p><span id="tv1-num">32</span> pieces</p>
+      </div>
+      <div class="produit" id="produit2">
+        <img src="./Image/tv/tv2.jpg" alt="tv"><br><br>
+        <p>Factory Direst Sales Aucma 536L ...</p><br>
+        <h3><span id="tv2-price"> 10 000.00</span> DH</h3><br>
+        <p><span id="tv2-num">32</span> pieces</p>
+      </div>
+      <div class="produit" id="produit3">
+        <img src="./Image/tv/tv1.jpg" alt="tv"><br><br>
+        <p>Factory Direst Sales Aucma 536L ...</p><br>
+        <h3><span id="tv3-price"> 10 000.00</span> DH</h3><br>
+        <p><span id="tv3-num">32</span> pieces</p>
+      </div>
+      <div class="produit" id="produit4">
+        <img src="./Image/tv/tv2.jpg" alt="tv"><br><br>
+        <p>Factory Direst Sales Aucma 536L ...</p><br>
+        <h3><span id="tv4-price"> 10 000.00</span> DH</h3><br>
+        <p><span id="tv4-num">32</span> pieces</p>
+      </div>
+      <div class="produit" id="produit5">
+        <img src="./Image/tv/tv1.jpg" alt="tv"><br><br>
+        <p>Factory Direst Sales Aucma 536L ...</p><br>
+        <h3><span id="tv5-price"> 10 000.00</span> DH</h3><br>
+        <p><span id="tv5-num">32</span> pieces</p>
+      </div>
+    </div>
+²
 
 
 
