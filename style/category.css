@@ -207,8 +207,7 @@ body{
 }
 
 .category{
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 1rem;
   display: flex;
   overflow-x: scroll;
 }
@@ -328,9 +327,9 @@ body{
 .profil-pic img{
   width: 70px;
 }
-
-
-
+.category::-webkit-scrollbar {
+  display: none;
+}
 
 
 

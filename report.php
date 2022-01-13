@@ -71,8 +71,68 @@
     </div>
   </header>
   <main>
-  <!-- write code here   -->
-  
+    <!-- write code here   -->
+    <div class="text">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta eum nemo consequatur deserunt nisi quisquam culpa quo, voluptatum assumenda dolore!</p>
+    </div>
+    <table class="report">
+      <tr>
+        <th>Nom de produit</th>
+        <th>Ventes</th>
+        <th>Stock</th>
+        <th>Catégorie</th>
+        <th>Date</th>
+      </tr>
+      <tr>
+        <td>Machine a laver 201</td>
+        <td>3</td>
+        <td>10</td>
+        <td>Machine a laver</td>
+        <td>2/1/2022</td>
+      </tr>
+      <tr>
+        <td>Machine a laver 201</td>
+        <td>3</td>
+        <td>10</td>
+        <td>Machine a laver</td>
+        <td>2/1/2022</td>
+      </tr>
+      <tr>
+        <td>Machine a laver 201</td>
+        <td>3</td>
+        <td>10</td>
+        <td>Machine a laver</td>
+        <td>2/1/2022</td>
+      </tr>
+      <tr>
+        <td>Machine a laver 201</td>
+        <td>3</td>
+        <td>10</td>
+        <td>Machine a laver</td>
+        <td>2/1/2022</td>
+      </tr>
+      <tr>
+        <td>Machine a laver 201</td>
+        <td>3</td>
+        <td>10</td>
+        <td>Machine a laver</td>
+        <td>2/1/2022</td>
+      </tr>
+      <tr>
+        <td>Machine a laver 201</td>
+        <td>3</td>
+        <td>10</td>
+        <td>Machine a laver</td>
+        <td>2/1/2022</td>
+      </tr>
+      <tr>
+        <td>Machine a laver 201</td>
+        <td>3</td>
+        <td>10</td>
+        <td>Machine a laver</td>
+        <td>2/1/2022</td>
+      </tr>
+    </table>
 
 
 

@@ -151,6 +151,7 @@ body{
 }
 .disktop{
   background-color: var(--premierColor);
+  color:red;
 }
 .current a{
   color: #000;
@@ -170,7 +171,22 @@ body{
   display: none;
 }
 /* disktop */
+.report{
+  width: 100%;
+}
 
+table, td, th{
+  border: 1px solid black;
+}
+table{
+  border-collapse: collapse;
+  width: 100%;
+  background-color: blue;
+}
+
+th{
+  height: 70px;
+}
 
 
 
