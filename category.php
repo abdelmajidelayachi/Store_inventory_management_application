@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Accueil</title>
   <link rel="stylesheet" href="style/category.css">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
+</style>
 </head>
 
 <body>
@@ -65,7 +68,7 @@
       <ul>
         <li><a href="index.php">Accueil</a></li>
         <li class="current"><a href="#">Catégorie</a></li>
-        <li><a href="#">Indisponible produit</a></li>
+        <li><a href="#">Ajouter des produits</a></li>
         <li><a href="report.php">Rapport</a></li>
       </ul>
     </div>
