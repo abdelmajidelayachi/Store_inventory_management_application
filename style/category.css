@@ -15,8 +15,9 @@
 
 body{
   background-color: var(--mainColor);
+  
 }
-
+/* ---------------------header--------------------- */
 .header-bar{
   display: flex;
   width: 100%;
@@ -229,8 +230,80 @@ body{
   height: 180px;
   
 }
+/* -----------Ajouter un produit------------------ */
+.contoner-produit{
+  position: fixed;
+  
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.808);
+  bottom: 0%;
+}
+#ajouterProduit{
+ /* position: absolute; */
+  width: 40%;
+  height: 90vh;
+  font-size: 2.2rem;
+  padding: 2%;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 30%;
+  margin-top: 2%;
+  background: white;
+}
+#upload{
+  background-color: #fff;
+  border-style:none ;
+  height: 50vh;
+}
+#upload img{
+  width: 30%;
+}
+.config{
+  background-color: white;
+  width: 100%;
+  
+  /* border-style: dashed; */
+  /* border-style: dashed; */
 
-
+}
+.input-parts{
+  border-style: none;
+  width: 100%;
+  padding: 1%;
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  color: rgb(43, 43, 43);
+ 
+  
+  
+}
+tr , th , td  {
+  border: 1px solid black;
+  padding: 2%;
+  font-size: 1rem;
+}
+.save{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  }
+.save button{
+  width: 10vw;
+  height: 7vh;
+  font-weight: 700;
+  margin-top: 5%;
+  border-radius: 10px;
+  
+  
+}
+#ajouter{
+  background-color: #5D78FF;
+}
 /* responsive  */
 @media screen and (max-width: 800px) {
   .icon-menu{

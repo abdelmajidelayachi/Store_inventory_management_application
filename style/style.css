@@ -10,15 +10,14 @@
   margin: 0;
   padding:0;
   box-sizing: border-box;
-  font-family: "popeins" sans-serif;
+  font-family: "Poppins";
 }
-html{
-  font-size: 62.5%;
-}
+html{font-size:62.5%;}
+
 body{
   background-color: var(--mainColor);
 }
-
+/* ---------------------header--------------------- */
 .header-bar{
   display: flex;
   width: 100%;
@@ -30,7 +29,7 @@ body{
   display: inline-block;
 }
 .logo{
-  margin:20px 50px;
+  margin:20px 50px ;
   cursor: pointer;
 }
 .logo img{
@@ -92,19 +91,19 @@ body{
 } */
 
 .alarm{
-  margin-left: 20%;
+  margin-left: 20px;
   margin-top: 30px;
 }
 
 .profil-pic{
-  margin-left: 1%;
+  margin-left: 20px;
   margin-top: 20px;
 }
 .name{
-  margin-left: 12%;
+  margin-left: 20px;
   margin-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
 }
 .profil-pic{
   width: 50px;
@@ -112,7 +111,6 @@ body{
   
  
 }
-
 .profil-pic img{
   width: 50px;
   border-radius: 50px;
@@ -132,16 +130,16 @@ body{
 }
 .nav-container ul li a{
   text-decoration: none;
-  color:black;
- font-weight: 700;
-  font-size: 2rem;
+  color: white;
+  font-size: 18px;
 }
+.nav-container ul li a:hover{
+  color:var(--mainColor)
+}
+
 .nav-container ul li {
   list-style: none;
   
-}
-.nav-container ul li a:hover{
-    color:var(--mainColor)
 }
 .nav-container{
  
@@ -157,7 +155,11 @@ body{
   background-color: var(--premierColor);
 }
 .current a{
-  border-bottom: 4px solid #F4FAF9 !important;
+  color: #000 !important;
+  /* border-bottom: 4px solid #F4FAF9 !important; */
+  background-color: white;
+  padding: 24px 15px;
+
 }
 
 .container{
