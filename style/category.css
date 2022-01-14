@@ -10,7 +10,7 @@
   margin: 0;
   padding:0;
   box-sizing: border-box;
-  font-family: "";
+  font-family: "Poppins";
 }
 
 body{
@@ -90,19 +90,19 @@ body{
 } */
 
 .alarm{
-  margin-left: 20%;
+  margin-left: 20px;
   margin-top: 30px;
 }
 
 .profil-pic{
-  margin-left: 1%;
+  margin-left: 20px;
   margin-top: 20px;
 }
 .name{
-  margin-left: 12%;
+  margin-left: 20px;
   margin-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
 }
 .profil-pic{
   width: 50px;
@@ -129,9 +129,8 @@ body{
 }
 .nav-container ul li a{
   text-decoration: none;
-  color:black;
-  font-size: 700;
-  font-size: 24px;
+  color: white;
+  font-size: 18px;
 }
 .nav-container ul li a:hover{
   color:var(--mainColor)
@@ -155,7 +154,11 @@ body{
   background-color: var(--premierColor);
 }
 .current a{
-  border-bottom: 4px solid #F4FAF9 !important;
+  color: #000 !important;
+  /* border-bottom: 4px solid #F4FAF9 !important; */
+  background-color: white;
+  padding: 24px 15px;
+
 }
 
 .container{
@@ -207,8 +210,7 @@ body{
 }
 
 .category{
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 1rem;
   display: flex;
   overflow-x: scroll;
 }
@@ -227,9 +229,6 @@ body{
   height: 180px;
   
 }
-
-
-
 
 
 /* responsive  */
@@ -276,8 +275,7 @@ body{
  
 }
 .name p{
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 14px;
   align-items: center;
 }
 .name p:nth-child(2){
@@ -293,7 +291,10 @@ body{
 .mobile{
   display: flex;
   width: 100%;
+  color:black !important;
 }
+
+
 .nav-container ul li a:hover{
   color:var(--secondColor)
 }
@@ -321,16 +322,18 @@ body{
   border-radius: 20px;
   font-size: 18px;
 }
-.current a{
+.mobile-current a{
   border-bottom: 4px solid var(--premierColor) !important;
+ 
+
 }
 
 .profil-pic img{
   width: 70px;
 }
-
-
-
+.category::-webkit-scrollbar {
+  display: none;
+}
 
 
 
