@@ -10,8 +10,8 @@
   <title>Accueil</title>
   <link rel="stylesheet" href="style/category.css">
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
-</style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
+  </style>
 </head>
 
 <body>
@@ -29,29 +29,25 @@
         </div>
       </div>
 
-
-      <div>
-        <div class="search">
-          <form action="./" method="get">
-            <div class="searchbar">
-              <input type="text" class="searchbar__input" name="q" placeholder="Cherche produit">
-              <button type="submit" class="searchbar__button">
-                <i class="material-icons">search</i>
-              </button>
-            </div>
-          </form>
-        </div>
+      <div class="search">
+        <form action="./" method="get">
+          <div class="searchbar">
+            <input type="text" class="searchbar__input" name="q" placeholder="Cherche produit">
+            <button type="submit" class="searchbar__button">
+              <i class="material-icons">search</i>
+            </button>
+          </div>
+        </form>
       </div>
+
       <div class="container topnav" id="myTopnav">
-        <div class="alarm">
-          <i class="material-icons ">notifications_active</i>
-        </div>
+
         <div class="profil-pic">
           <img src="Image/profile-pic.jpg" alt="profile">
         </div>
         <div class="name">
           <p>EL Ayachi Abdelmajid</p>
-          <p>Employé</p>
+          <p class="user">Employé</p>
         </div>
         <div class="nav-container mobile">
           <ul>
@@ -316,7 +312,7 @@
       </div>
     </div><br>
 
-    
+
 
 
 
@@ -331,7 +327,6 @@
         x.className += " topnav";
       } else {
         x.className = "container";
-
       }
     }
   </script>

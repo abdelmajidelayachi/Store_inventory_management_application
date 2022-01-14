@@ -37,7 +37,7 @@ body{
 }
 .search{
   margin-top: 20px;
-  width: 40%;
+  width: 35%;
 }
 .searchbar {
   width: 100%;
@@ -89,10 +89,6 @@ body{
   margin-left:20% ;
 } */
 
-.alarm{
-  margin-left: 20px;
-  margin-top: 30px;
-}
 
 .profil-pic{
   margin-left: 20px;
@@ -130,7 +126,8 @@ body{
 .nav-container ul li a{
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 600;
 }
 .nav-container ul li a:hover{
   color:var(--mainColor)
@@ -150,10 +147,14 @@ body{
   justify-content: space-evenly;
 
 }
+.user{
+  text-align: center;
+  color:var(--secondColor);
+}
 .disktop{
   background-color: var(--premierColor);
 }
-.current a{
+.disktop .current a{
   color: #000 !important;
   /* border-bottom: 4px solid #F4FAF9 !important; */
   background-color: white;
@@ -162,7 +163,7 @@ body{
 }
 
 .container{
-  width: 30%;
+  width: 270px;
   justify-content: space-between;
 }
 
@@ -263,13 +264,7 @@ body{
     width: 80%;
   }
   
-
   
-.alarm{
-  margin-left: 10%;
-  margin-top: 30px;
-}
-
 .name{
   margin-left: 0;
  
@@ -288,25 +283,9 @@ body{
 .disktop{
   display: none;
 }
-.mobile{
-  display: flex;
+.mobile {
+  display: block;
   width: 100%;
-  color:black !important;
-}
-
-
-.nav-container ul li a:hover{
-  color:var(--secondColor)
-}
-.container {
-  background-color: var(--premierColor);
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
-.alarm{
-  display: none;
 }
 .mobile ul {
   justify-content: space-evenly;
@@ -320,10 +299,27 @@ body{
   width: 50%;
   padding: 8px;
   border-radius: 20px;
-  font-size: 18px;
+  text-align: center;   
 }
-.mobile-current a{
-  border-bottom: 4px solid var(--premierColor) !important;
+.mobile ul li a{
+  font-size: 14px;
+  color: #000 !important;
+}
+
+.nav-container ul li a:hover{
+  color:var(--secondColor)
+}
+.container {
+  background-color: var(--premierColor);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+
+ .current {
+  background-color: var(--ThirdColor) !important;
  
 
 }

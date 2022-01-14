@@ -8,6 +8,9 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Accueil</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
+</style>
   <link rel="stylesheet" href='style/style.css'>
 </head>
 
@@ -15,19 +18,19 @@
   <!-- header -->
   <header>
     <div class="header-bar">
-      <div class="container_mobile">
+    <div class="container_mobile">
         <div class="logo">
           <img src="./Image/logo-ic.svg" alt="">
         </div>
         <div class="three_bars">
           <a href="javascript:void(0);" class="icon-menu" onclick="responsive()">
-            <i class="fa fa-bars fa-2x"></i>
+            <i class="fa fa-bars fa-5x"></i>
           </a>
         </div>
       </div>
 
 
-      <div>
+      
         <div class="search">
           <form action="./" method="get">
             <div class="searchbar">
@@ -38,23 +41,20 @@
             </div>
           </form>
         </div>
-      </div>
+      
       <div class="container topnav" id="myTopnav">
-        <div class="alarm">
-          <i class="material-icons ">notifications_active</i>
-        </div>
         <div class="profil-pic">
           <img src="Image/profile-pic.jpg" alt="profile">
         </div>
         <div class="name">
           <p>EL Ayachi Abdelmajid</p>
-          <p id="aaa">Employé</p>
+          <p class="user">Employé</p>
         </div>
         <div class="nav-container mobile">
           <ul>
             <li class="current"><a href="#">Accueil</a></li>
-            <li><a href="category.php">catégorie</a></li>
-            <li><a href="#">Indisponible produit</a></li>
+            <li><a href="category.php">Catégorie</a></li>
+            <li><a href="#">Ajouter des produits</a></li>
             <li><a href="report.php">Rapport</a></li>
           </ul>
         </div>
@@ -72,29 +72,21 @@
   </header>
   <main>
   <!-- write code here   -->
+  <div class="chiffre">
+      <div class="gain-jour">
+        <h3>Les gains du jour</h3>
+        <p>2000,500 DH</p>
+      </div>
+      <div class="gain-mois">
+        <h3>Return de mois</h3>
+        <p>12.000,300 DH</p>
+      </div>
+      <div class="total-gain">
+        <h3>Total Sales de mois</h3>
+        <p>60.980,119 DH</p>
+      </div>
+    </div>
   
-  <aside>
-   
-   <table class="total">
-     <tr class="container-table">
-       <th >
-       <p>Les gains du jour</p>
-       <p>2000,500 DH</p>
-       </th>
-     
-       <th class="second-box">
-       <p>Return de mois</p>
-       <p>12.000,300 DH</p>
-       </th>
-      
-       <th>
-       <p>Total Sales de mois</p>
-       <p >60.980,119 DH</p>
-       </th>
-       </tr>
-   </table>
-    
- </aside>
    <section class="category-box">
      <div class="box">
        <img src="image/img-33.png" alt="Machine a laver" id="box-img">
@@ -102,7 +94,8 @@
          <p>Machine a laver</p>
       
      </div>
-     <div  class="box"><img src="image/img-38.webp" alt="Télévision" id="box-img">
+     <div  class="box">
+      <img src="image/img-38.webp" alt="Télévision" id="box-img">
    <p>Télévision</p></div>
      <div  class="box"><img src="image/img-32.jpg" alt="Machine a coudre" id="box-img">
    <p>Machine a coudre</p>
@@ -130,8 +123,10 @@
      
    </section>
 
-  <div class="sign-in" id="compte">
+  <div  class="sign-in" id="compte">
       <form action="sign in" method="get" id="id00">
+        <button class="sign sign-in-btn">Sign in</button>
+        <button class="sign sign-up-btn">sign up</button>
         <label for="usrname">
           username
         </label>
