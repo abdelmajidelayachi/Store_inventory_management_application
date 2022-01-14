@@ -10,8 +10,11 @@
   margin: 0;
   padding:0;
   box-sizing: border-box;
+  font-family: "popeins" sans-serif;
 }
-
+html{
+  font-size: 62.5%;
+}
 body{
   background-color: var(--mainColor);
 }
@@ -130,8 +133,8 @@ body{
 .nav-container ul li a{
   text-decoration: none;
   color:black;
-  font-size: 700;
-  font-size: 24px;
+ font-weight: 700;
+  font-size: 2rem;
 }
 .nav-container ul li {
   list-style: none;
@@ -171,14 +174,71 @@ body{
 }
 /* disktop */
 
+.total{
+  background-color: rgb(255, 255, 255);
+  width: 90%;
+  
+  margin-top: 5%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container-table{
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.5rem;
+  
+  
 
+}
+.category-box{
+  width: 100%;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  justify-content: space-around;
+  
+  /* f */
+  
+}
+#box-img{
+  margin-top: 20%;
+  width: 90%;
+  height: 45vh;
+  background-color: white;
+ 
+}
+/* .box{margin-top: 3%;} */
+.box P{
 
-
-
-
+ text-align: center;
+ background-color: rgba(255, 255, 255, 0.61);
+ height: 10vh;
+ font-size:2.8rem;
+ padding-top: 2vh;
+ 
+ width: 90%;
+ 
+  
+}
+.container-table th{padding: 3%;}
+.second-box{
+  border-left:2px solid black ;
+  border-right:2px solid black ;
+  
+  
+  
+}
 
 /* responsive  */
+@media screen and (max-width : 1000px){
+  html{font-size:45.5%;}
+}
 @media screen and (max-width: 800px) {
+  html{
+    font-size: 38.5%;
+  }
   .icon-menu{
     display: block;
     margin-top: 15px;
@@ -271,10 +331,42 @@ body{
 .profil-pic img{
   width: 70px;
 }
+.img-box{
+  height: 35vh;
+}
+.category-box{
+  display: grid;
+  grid-template-columns: auto auto auto  ;
+
+
+
+
+}
+@media screen and (max-width : 550px){
+  html{font-size:35.5%;}
+  .category-box{
+    display: grid;
+    grid-template-columns: auto  auto  ;
   
-
-
-
-
-
+  
+  
+  
+  }
+  /* .img-box{
+    height: 20vh;
+  } */
+}
+@media screen and (max-width : 450px){
+  html{font-size:40.5%;}
+  .category-box{
+    
+    display: grid;
+    grid-template-columns: auto ;
+  
+  
+  
+  
+  }
+  
+ 
 }
