@@ -173,7 +173,6 @@ body{
   display: none;
 }
 /* disktop */
-
 .total{
   background-color: rgb(255, 255, 255);
   width: 90%;
@@ -229,6 +228,18 @@ body{
   
   
   
+}
+.sign-in{
+  background-color: var(--mainColor);
+  display: flex;
+  flex-direction: column;
+}
+#id00{
+  display: flex;
+  flex-direction: column;
+}
+.sign-mode{
+  background-color: var(--ThirdColor) !important;
 }
 
 /* responsive  */
@@ -341,6 +352,7 @@ body{
 
 
 
+}
 }
 @media screen and (max-width : 550px){
   html{font-size:35.5%;}
