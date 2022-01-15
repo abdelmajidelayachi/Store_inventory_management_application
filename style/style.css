@@ -12,11 +12,13 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html{font-size:62.5%;}
+
 body{
   background-color: var(--mainColor);
   position: relative;
 }
-
+/* ---------------------header--------------------- */
 .header-bar{
   display: flex;
   width: 100%;
@@ -28,7 +30,7 @@ body{
   display: inline-block;
 }
 .logo{
-  margin:20px 50px;
+  margin:20px 50px ;
   cursor: pointer;
 }
 .logo img{

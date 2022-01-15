@@ -86,7 +86,9 @@
     </div>
     <div class="category" id="caty1">
       <div class="produit" id="produit1">
-        <img src="./Image/tv/tv1.jpg" alt="tv"><br><br>
+        <button onclick="">
+        <img src="./Image/tv/tv1.jpg" alt="tv" >
+        </button><br><br>
         <p>Factory Direst Sales Aucma 536L ...</p><br>
         <h3><span id="tv1-price"> 10 000.00</span> DH</h3><br>
         <p><span id="tv1-num">32</span> pieces</p>
@@ -318,9 +320,44 @@
 
 
   </main>
-
+  <div id="form" onchange="Ajouter_prouduit()">
+<!-- <section class="contoner-produit"  >
+  <div id="ajouterProduit">
+  <button id="upload"><img src="./image/photo.png" alt="Save Image"></button>
+  <table class="config">
+    
+    <tr>
+      <th>Category</th>
+      <td><input class="input-parts" type="text" name="Category" id="category"></td>
+    </tr>
+    <tr>
+      <th>Marque</th>
+      <td><input class="input-parts" type="text" name="Marque" id="marque"></td>
+    </tr>
+    <tr>
+      <th>Color</th>
+      <td><input class="input-parts" type="color" name="color" id="color" value="#ffffff"></td>
+    </tr>
+    <tr>
+      <th>Quantity</th>
+      <td><input class="input-parts" type="number" name="Quantity" id="quantity" min="1"></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><input class="input-parts" type="number" name="Price" id="price" min="1"></td>
+    </tr>
+  </table>
+  <div class="save">
+      <button id="retour" >Retour</button>
+      <button id="ajouter" >Enregistrer</button>
+  </div>
+  </div>
+</section> -->
+</div>
   <!-- javascript code -->
-  <script>
+ 
+</body>
+<script>
     function responsive() {
       var x = document.getElementById("myTopnav");
       if (x.className === "container") {
@@ -329,7 +366,41 @@
         x.className = "container";
       }
     }
+    function Ajouter_prouduit(){
+      let form=getElementById("form");
+      form=`<section class="contoner-produit"  id="form" onchange="Ajouter_prouduit()">
+  <div id="ajouterProduit">
+  <button id="upload"><img src="./image/photo.png" alt="Save Image"></button>
+  <table class="config">
+    
+    <tr>
+      <th>Category</th>
+      <td><input class="input-parts" type="text" name="Category" id="category"></td>
+    </tr>
+    <tr>
+      <th>Marque</th>
+      <td><input class="input-parts" type="text" name="Marque" id="marque"></td>
+    </tr>
+    <tr>
+      <th>Color</th>
+      <td><input class="input-parts" type="color" name="color" id="color" value="#ffffff"></td>
+    </tr>
+    <tr>
+      <th>Quantity</th>
+      <td><input class="input-parts" type="number" name="Quantity" id="quantity" min="1"></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><input class="input-parts" type="number" name="Price" id="price" min="1"></td>
+    </tr>
+  </table>
+  <div class="save">
+      <button id="retour" >Retour</button>
+      <button id="ajouter" >Enregistrer</button>
+  </div>
+  </div>
+</section>`
+document.getElementById('form').innerHTML =form;
+    }
   </script>
-</body>
-
 </html>
