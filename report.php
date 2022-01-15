@@ -81,7 +81,7 @@
       </div>
       <div class="total-gain">
         <h3>Total Sales de mois</h3>
-        <p>60.980,119 DH</p>
+        <p>60.980,110 DH</p>
       </div>
     </div>
 

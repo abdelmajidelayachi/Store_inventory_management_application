@@ -143,9 +143,6 @@
   </div>
 
 
-
-
-
   </main>
 
   <!-- javascript code -->
