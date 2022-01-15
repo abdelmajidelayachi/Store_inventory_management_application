@@ -90,10 +90,6 @@
   </div>
 
 
-
-
-
-
   </main>
 
   <!-- javascript code -->
