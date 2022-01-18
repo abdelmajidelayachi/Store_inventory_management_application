@@ -29,8 +29,6 @@
         </div>
       </div>
 
-
-
       <div class="search">
         <form action="./" method="get">
           <div class="searchbar">
@@ -65,7 +63,7 @@
       <ul>
         <li class="current"><a href="#">Accueil</a></li>
         <li><a href="category.php">catégorie</a></li>
-        <li><a href="#">Indisponible produit</a></li>
+        <li><a href="#">Ajouter des produits</a></li>
         <li><a href="report.php">Rapport</a></li>
       </ul>
     </div>
@@ -180,13 +178,15 @@
   <script>
     function responsive() {
       var x = document.getElementById("myTopnav");
-      if (x.className === "container") {
-        x.className += " topnav";
-      } else {
-        x.className = "container";
+      // if (x.className === "container") {
+      //   x.className += " topnav";
+      // } else {
+      //   x.className = "container";
 
-      }
-    }
+      // }
+      x.className === "container"?x.className += " topnav":x.className = "container";
+      
+    } 
   </script>
 </body>
 
