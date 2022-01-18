@@ -91,7 +91,7 @@
     <section class="category" id="caty1">
 
       <div class="cotoner-child" id="produit1">
-        <button class="produit" onclick="afichage(0)">
+        <button class="produit" onmouseover="afichage_over(0)" onmouseout="afichage_out(0)">
           <img src="./Image/tv/tv1.jpg" alt="tv">
           <br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
@@ -104,7 +104,7 @@
       </div>
 
       <div class="cotoner-child" id="produit2">
-        <button class="produit" onclick="afichage(1)">
+        <button class="produit" onmouseover="afichage_over(1)" onmouseout="afichage_out(1)">
           <img src="./Image/tv/tv2.jpg" alt="tv"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="tv2-price"> 10 000.00</span> DH</h3><br>
@@ -116,7 +116,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit3">
-        <button class="produit" onclick="afichage(2)">
+        <button class="produit" onmouseover="afichage_over(2)" onmouseout="afichage_out(2)">
           <img src="./Image/tv/tv1.jpg" alt="tv"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="tv3-price"> 10 000.00</span> DH</h3><br>
@@ -127,7 +127,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit4">
-        <button class="produit" onclick="afichage(3)">
+        <button class="produit" onmouseover="afichage_over(3)" onmouseout="afichage_out(3)">
           <img src="./Image/tv/tv2.jpg" alt="tv"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="tv4-price"> 10 000.00</span> DH</h3><br>
@@ -138,7 +138,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit5">
-        <button class="produit" onclick="afichage(4)">
+        <button class="produit" onmouseover="afichage_over(4)" onmouseout="afichage_out(4)">
           <img src="./Image/tv/tv1.jpg" alt="tv"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="tv5-price"> 10 000.00</span> DH</h3><br>
@@ -152,7 +152,7 @@
     <br>
     <section class="category" id="caty2">
       <div class="cotoner-child" id="produit11">
-        <button class="produit" onclick="afichage(5)">
+        <button class="produit" onmouseover="afichage_over(5)" onmouseout="afichage_out(5)">
           <img src="./Image/seo/sh1.jpg" alt="sh"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="sh1-price"> 10 000.00</span> DH</h3><br>
@@ -163,7 +163,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit12">
-        <button class="produit" onclick="afichage(6)">
+        <button class="produit" onmouseover="afichage_over(6)" onmouseout="afichage_out(6)">
           <img src="./Image/seo/sh2.jpg" alt="sh"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="sh2-price"> 10 000.00</span> DH</h3><br>
@@ -174,7 +174,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit13">
-        <button class="produit" onclick="afichage(7)">
+        <button class="produit" onmouseover="afichage_over(7)" onmouseout="afichage_out(7)">
           <img src="./Image/seo/sh1.jpg" alt="sh"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="sh3-price"> 10 000.00</span> DH</h3><br>
@@ -185,7 +185,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit14">
-        <button class="produit" onclick="afichage(8)">
+        <button class="produit" onmouseover="afichage_over(8)" onmouseout="afichage_out(8)">
           <img src="./Image/seo/sh2.jpg" alt="sh"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="sh4-price"> 10 000.00</span> DH</h3><br>
@@ -196,7 +196,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit15">
-        <button class="produit" onclick="afichage(9)">
+        <button class="produit" onmouseover="afichage_over(9)" onmouseout="afichage_out(9)">
           <img src="./Image/seo/sh1.jpg" alt="sh"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="sh5-price"> 10 000.00</span> DH</h3><br>
@@ -210,7 +210,7 @@
     <br>
     <section class="category" id="caty3">
       <div class="cotoner-child" id="produit21">
-        <button class="produit" onclick="afichage(10)">
+        <button class="produit" onmouseover="afichage_over(10)" onmouseout="afichage_out(10)">
           <img src="./Image/wash/wc1.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="wc1-price"> 10 000.00</span> DH</h3><br>
@@ -221,7 +221,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit22">
-        <button class="produit" onclick="afichage(11)">
+        <button class="produit" onmouseover="afichage_over(12)" onmouseout="afichage_out(12)">
           <img src="./Image/wash/wc2.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="wc2-price"> 10 000.00</span> DH</h3><br>
@@ -232,7 +232,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit23">
-        <button class="produit" onclick="afichage(12)">
+        <button class="produit" onmouseover="afichage_over(13)" onmouseout="afichage_out(13)">
           <img src="./Image/wash/wc3.png" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="wc3-price"> 10 000.00</span> DH</h3><br>
@@ -243,7 +243,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit24">
-        <button class="produit" onclick="afichage(13)">
+        <button class="produit" onmouseover="afichage_over(14)" onmouseout="afichage_out(14)">
           <img src="./Image/wash/wc2.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="wc4-price"> 10 000.00</span> DH</h3><br>
@@ -254,7 +254,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit25">
-        <button class="produit" onclick="afichage(14)">
+        <button class="produit" onmouseover="afichage_over(15)" onmouseout="afichage_out(15)">
           <img src="./Image/wash/wc3.png" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="wc5-price"> 10 000.00</span> DH</h3><br>
@@ -265,7 +265,7 @@
     </section><br>
     <section class="category" id="caty4">
       <div class="cotoner-child" id="produit31">
-        <button class="produit" onclick="afichage(15)">
+        <button class="produit" onmouseover="afichage_over(16)" onmouseout="afichage_out(16)">
           <img src="./Image/forno/oven1.png" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="sh1-price"> 10 000.00</span> DH</h3><br>
@@ -276,7 +276,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit32">
-        <button class="produit" onclick="afichage(16)">
+        <button class="produit" onmouseover="afichage_over(17)" onmouseout="afichage_out(17)">
           <img src="./Image/forno/oven2.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="sh2-price"> 10 000.00</span> DH</h3><br>
@@ -287,7 +287,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit33">
-        <button class="produit" onclick="afichage(17)">
+        <button class="produit" onmouseover="afichage_over(18)" onmouseout="afichage_out(18)">
           <img src="./Image/forno/oven3.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="sh3-price"> 10 000.00</span> DH</h3><br>
@@ -298,7 +298,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit34">
-        <button class="produit" onclick="afichage(18)">
+        <button class="produit" onmouseover="afichage_over(19)" onmouseout="afichage_out(19)">
           <img src="./Image/forno/oven1.png" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="sh4-price"> 10 000.00</span> DH</h3><br>
@@ -309,7 +309,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit35">
-        <button class="produit" onclick="afichage(19)">
+        <button class="produit" onmouseover="afichage_over(20)" onmouseout="afichage_out(20)">
           <img src="./Image/forno/oven2.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="sh5-price"> 10 000.00</span> DH</h3><br>
@@ -322,7 +322,7 @@
     </section><br>
     <section class="category" id="caty5">
       <div class="cotoner-child" id="produit41">
-        <button class="produit" onclick="afichage(20)">
+        <button class="produit" onmouseover="afichage_over(21)" onmouseout="afichage_out(21)">
           <img src="./Image/refrigerator/fr1.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="fr1-price"> 10 000.00</span> DH</h3><br>
@@ -333,7 +333,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit42">
-        <button class="produit" onclick="afichage(21)">
+        <button class="produit" onmouseover="afichage_over(22)" onmouseout="afichage_out(22)">
           <img src="./Image/refrigerator/fr2.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="fr2-price"> 10 000.00</span> DH</h3><br>
@@ -344,7 +344,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit43">
-        <button class="produit" onclick="afichage(22)">
+        <button class="produit" onmouseover="afichage_over(23)" onmouseout="afichage_out(23)">
           <img src="./Image/refrigerator/fr3.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="fr3-price"> 10 000.00</span> DH</h3><br>
@@ -355,7 +355,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit44">
-        <button class="produit" onclick="afichage(23)">
+        <button class="produit" onmouseover="afichage_over(24)" onmouseout="afichage_out(24)">
           <img src="./Image/refrigerator/fr6.png" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="fr4-price"> 10 000.00</span> DH</h3><br>
@@ -366,7 +366,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit45">
-        <button class="produit" onclick="afichage(24)">
+        <button class="produit" onmouseover="afichage_over(25)" onmouseout="afichage_out(25)">
           <img src="./Image/refrigerator/fr7.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="fr5-price"> 10 000.00</span> DH</h3><br>
@@ -381,7 +381,7 @@
     <section class="category" id="caty6">
 
       <div class="cotoner-child" id="produit45">
-        <button class="produit" onclick="afichage(25)">
+        <button class="produit" onmouseover="afichage_over(26)" onmouseout="afichage_out(26)">
           <img src="./Image/ice/ice-fr1.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="fr-ice1-price"> 10 000.00</span> DH</h3><br>
@@ -392,7 +392,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit52">
-        <button class="produit" onclick="afichage(26)">
+        <button class="produit" onmouseover="afichage_over(27)" onmouseout="afichage_out(27)">
           <img src="./Image/ice/ice-fr2.png" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="fr-ice2-price"> 10 000.00</span> DH</h3><br>
@@ -403,7 +403,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit53">
-        <button class="produit" onclick="afichage(27)">
+        <button class="produit" onmouseover="afichage_over(28)" onmouseout="afichage_out(28)">
           <img src="./Image/ice/ice-fr3.png" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="fr-ice3-price"> 10 000.00</span> DH</h3><br>
@@ -414,7 +414,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit54">
-        <button class="produit" onclick="afichage(28)">
+        <button class="produit" onmouseover="afichage_over(29)" onmouseout="afichage_out(29)">
           <img src="./Image/ice/ice-fr4.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="fr-ice4-price"> 10 000.00</span> DH</h3><br>
@@ -425,7 +425,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit55">
-        <button class="produit" onclick="afichage(29)">
+        <button class="produit" onmouseover="afichage_over(30)" onmouseout="afichage_out(30)">
           <img src="./Image/ice/ice-fr5.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="fr-ice5-price"> 10 000.00</span> DH</h3><br>
@@ -439,32 +439,32 @@
       </div>
     </section>
     <br>
-   
+
     <section class="category" id="caty7">
       <div class="cotoner-child" id="produit61">
-        <button class="produit" onclick="afichage(30)">
+        <button class="produit" onmouseover="afichage_over(31)" onmouseout="afichage_out(31)">
           <img src="./Image/cafe/c1.png" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="cafe1-price"> 10 000.00</span> DH</h3><br>
           <p><span id="cafe1-num">32</span> pieces</p>
         </button>
         <div class="afichage">
-              
+
         </div>
       </div>
       <div class="cotoner-child" id="produit62">
-        <button class="produit" onclick="afichage(31)">
+        <button class="produit" onmouseover="afichage_over(32)" onmouseout="afichage_out(32)">
           <img src="./Image/cafe/c2.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="cafe2-price"> 10 000.00</span> DH</h3><br>
           <p><span id="cafe2-num">32</span> pieces</p>
         </button>
         <div class="afichage">
-              
+
         </div>
       </div>
       <div class="cotoner-child" id="produit63">
-        <button class="produit" onclick="afichage(32)">
+        <button class="produit" onmouseover="afichage_over(33)" onmouseout="afichage_out(33)">
           <img src="./Image/cafe/c3.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="cafe3-price"> 10 000.00</span> DH</h3><br>
@@ -475,7 +475,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit64">
-        <button class="produit" onclick="afichage(33)">
+        <button class="produit" onmouseover="afichage_over(34)" onmouseout="afichage_out(34)">
           <img src="./Image/cafe/c4.jpg" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="cafe4-price"> 10 000.00</span> DH</h3><br>
@@ -486,7 +486,7 @@
         </div>
       </div>
       <div class="cotoner-child" id="produit65">
-        <button class="produit" onclick="afichage(34)">
+        <button class="produit" onmouseover="afichage_over(35)" onmouseout="afichage_out(35)">
           <img src="./Image/cafe/c1.png" alt="image"><br><br>
           <p>Factory Direst Sales Aucma 536L ...</p><br>
           <h3><span id="cafe5-price"> 10 000.00</span> DH</h3><br>
@@ -589,17 +589,22 @@
     </section>`
     document.getElementById('form').innerHTML = form;
   }
+ 
 
-  function afichage(p) {
-    var Frame = document.getElementsByClassName('afichage');
+  function afichage_over(i) {
+    let Frame = document.getElementsByClassName('afichage');
     // for(let i=0;i<Frame.length;i++){
-    Frame[p].innerHTML = ` <div class="frame">
+    Frame[i].innerHTML = ` <div class="frame">
         <button id="Modifier" >Modifier</button>
         <button id="Supprimer" >Supprimer</button>
         </div>`;
-
-
+    
   }
+  function afichage_out(i) {
+    let Frame = document.getElementsByClassName('frame');
+    Frame[i].innerHTML = ` <div class="afichage"> </div>`;
+  }
+ 
 </script>
 
 </html>
