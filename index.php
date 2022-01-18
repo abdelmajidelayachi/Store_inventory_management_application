@@ -26,7 +26,6 @@
         </div>
       </div>
 
-
       <div>
         <div class="search">
           <form action="./" method="get">
@@ -47,7 +46,7 @@
           <img src="Image/profile-pic.jpg" alt="profile">
         </div>
         <div class="name">
-          <p>EL Ayachi Abdelmajid</p>
+          <p>ELAyachi Abdelmajid</p>
           <p>Employé</p>
         </div>
         <div class="nav-container mobile">
