@@ -29,15 +29,19 @@
         </div>
       </div>
 
-      <div class="search">
-        <form action="./" method="get">
-          <div class="searchbar">
-            <input type="text" class="searchbar__input" name="q" placeholder="Cherche produit">
-            <button type="submit" class="searchbar__button">
-              <i class="material-icons">search</i>
-            </button>
-          </div>
-        </form>
+
+      <div>
+        <div class="search">
+          <form action="./" method="get">
+            <div class="searchbar">
+              <input type="text" class="searchbar__input" name="q" placeholder="Cherche produit">
+              <button type="submit" class="searchbar__button">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </form>
+        </div>
+
       </div>
 
       <div class="container topnav" id="myTopnav">
@@ -45,6 +49,7 @@
           <img src="Image/profile-pic.jpg" alt="profile">
         </div>
         <div class="name">
+
           <p>EL Ayachi Abdelmajid</p>
           <p class="user">Employé</p>
         </div>
