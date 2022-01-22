@@ -1,3 +1,12 @@
+<?php 
+session_start();
+if(!isset($_SESSION['g'])){
+  header('location:login/connexion.php');
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +39,7 @@
       </div>
 
 
-      <div>
+      <div class="search-container">
         <div class="search">
           <form action="./" method="get">
             <div class="searchbar">
@@ -45,13 +54,13 @@
       </div>
 
       <div class="container topnav" id="myTopnav">
-        <div class="profil-pic">
+        <div class="profil-pic" id="profil" onclick="profil()">
           <img src="Image/profile-pic.jpg" alt="profile">
         </div>
         <div class="name">
 
-          <p>EL Ayachi Abdelmajid</p>
-          <p class="user">Employé</p>
+          <p id="login-user"><?php echo  $_SESSION['g'] ?></p>
+          <p class="user"><a href="login/logout.php" style="text-decoration: none;">Déconnecter</a></p>
         </div>
         <div class="nav-container mobile">
           <ul>
@@ -156,32 +165,42 @@
         </div>
       </div>
     </div>
+<!-- 
+        $count=0;
+        
+        if($count==0){
+          echo $dt;
+          $connect=true;
+        }
+        
 
-    <div class="sign-in" id="compte">
-      <form action="sign in" method="get" id="id00">
-        <button class="sign sign-in-btn">Sign in</button>
-        <button class="sign sign-up-btn">sign up</button>
-        <label for="usrname">
-          username
-        </label>
-        <input type="text" name="cin" id="cin" placeholder="Enter votre Cin?">
-        <label for="Cin">
-          CIN
-        </label>
-        <input type="text" name="username" id="usrname" placeholder="Enter votre username?">
-        <label for="usrname">
-          Mot de passe
-        </label>
-        <input type="text" name="username" id="usrname" placeholder="Enter votre username?">
-      </form>
-    </div>
+    $database = mysqli_select_db($conn, $db);
+    if (isset($_POST['cin'])) {
+      $cin = $_POST['cin'];
+      $password_ = $_POST['password'];
+      $sql_login = "SELECT * FROM `employe` WHERE CIN='" . $cin . "' AND PASSWORD='" . $password_ . "'limit 1";
+      $result = mysqli_query($conn, $sql_login);
+      if (mysqli_num_rows($result) > 0) {
+        echo "<script>alert('you logged in')</script>";
+        $connect=true;
+        exit();
+      } else {
+        echo $dt;
+        $connect=false;
+        exit();
+      }
+    }
+    
 
+    ?> -->
+   
 
   </main>
 
   <!-- javascript code -->
   <script type="text/javaScript" src="js.js">
   </script>
+
 </body>
 
 </html>
