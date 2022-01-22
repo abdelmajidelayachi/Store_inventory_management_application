@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
-</style>
-  <title>Accueil</title>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
+  </style>
+  <title>Report</title>
   <link rel="stylesheet" href="style/report.css">
 </head>
 
@@ -19,8 +19,7 @@
   <header>
     <div class="header-bar">
       <div class="container_mobile">
-        <div class="logo">
-          <img src="./Image/logo-ic.svg" alt="">
+        <div class="logo"><a href="index.php"> <img src="./Image/logo-ic.svg" alt="logo"></a>
         </div>
         <div class="three_bars">
           <a href="javascript:void(0);" class="icon-menu" onclick="responsive()">
@@ -29,35 +28,31 @@
         </div>
       </div>
 
-
-      <div>
-        <div class="search">
-          <form action="./" method="get">
-            <div class="searchbar">
-              <input type="text" class="searchbar__input" name="q" placeholder="Cherche produit">
-              <button type="submit" class="searchbar__button">
-                <i class="material-icons">search</i>
-              </button>
-            </div>
-          </form>
-        </div>
+      <div class="search">
+        <form action="./" method="get">
+          <div class="searchbar">
+            <input type="text" class="searchbar__input" name="q" placeholder="Cherche produit">
+            <button type="submit" class="searchbar__button">
+              <i class="material-icons">search</i>
+            </button>
+          </div>
+        </form>
       </div>
+
       <div class="container topnav" id="myTopnav">
-        <div class="alarm">
-          <i class="material-icons ">notifications_active</i>
-        </div>
+
         <div class="profil-pic">
           <img src="Image/profile-pic.jpg" alt="profile">
         </div>
         <div class="name">
           <p>EL Ayachi Abdelmajid</p>
-          <p>Employé</p>
+          <p class="user">Employé</p>
         </div>
         <div class="nav-container mobile">
           <ul>
             <li><a href="index.php">Accueil</a></li>
             <li><a href="category.php">catégorie</a></li>
-            <li><a href="#">Indisponible produit</a></li>
+            <li><a href="Ajouter.php">Ajouter des produits</a></li>
             <li class="mobile-current"><a href="#">Rapport</a></li>
           </ul>
         </div>
@@ -68,8 +63,8 @@
       <ul>
         <li><a href="index.php">Accueil</a></li>
         <li><a href="category.php">catégorie</a></li>
-        <li><a href="#">Ajouter des produits</a></li>
-        <li class="current"><a href="#">Rapport</a></li>
+        <li><a href="Ajouter.php">Ajouter des produits</a></li>
+        <li class="current"><a href="report.php">Rapport</a></li>
       </ul>
     </div>
   </header>
@@ -86,7 +81,7 @@
       </div>
       <div class="total-gain">
         <h3>Total Sales de mois</h3>
-        <p>60.980,119 DH</p>
+        <p>60.980,110 DH</p>
       </div>
     </div>
 
@@ -236,16 +231,7 @@
   </main>
 
   <!-- javascript code -->
-  <script>
-    function responsive() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "container") {
-        x.className += " topnav";
-      } else {
-        x.className = "container";
-
-      }
-    }
+  <script type="text/javaScript" src="js.js">
   </script>
 </body>
 

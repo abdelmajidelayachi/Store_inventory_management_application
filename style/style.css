@@ -10,13 +10,15 @@
   margin: 0;
   padding:0;
   box-sizing: border-box;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 }
-html{font-size:62.5%;}
-
-body{
+html{
+  font-size: 65.2%;
+}
+/* ody{
   background-color: var(--mainColor);
-}
+  position: relative;
+} */
 /* ---------------------header--------------------- */
 .header-bar{
   display: flex;
@@ -38,7 +40,7 @@ body{
 }
 .search{
   margin-top: 20px;
-  width: 40%;
+  width: 35%;
 }
 .searchbar {
   width: 100%;
@@ -90,11 +92,6 @@ body{
   margin-left:20% ;
 } */
 
-.alarm{
-  margin-left: 20px;
-  margin-top: 30px;
-}
-
 .profil-pic{
   margin-left: 20px;
   margin-top: 20px;
@@ -102,7 +99,7 @@ body{
 .name{
   margin-left: 20px;
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .profil-pic{
@@ -120,7 +117,6 @@ body{
 .compte{
   display: flex;
   margin-top:0px;
-  background-color: blue;
   padding: 0px;
 }
 .container {
@@ -131,7 +127,8 @@ body{
 .nav-container ul li a{
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 2rem;
+  font-weight: 600;
 }
 .nav-container ul li a:hover{
   color:var(--mainColor)
@@ -151,10 +148,14 @@ body{
   justify-content: space-evenly;
 
 }
+.user{
+  text-align: center;
+  color:var(--secondColor);
+}
 .disktop{
   background-color: var(--premierColor);
 }
-.current a{
+.disktop .current a{
   color: #000 !important;
   /* border-bottom: 4px solid #F4FAF9 !important; */
   background-color: white;
@@ -163,10 +164,11 @@ body{
 }
 
 .container{
-  width: 30%;
+  width: 270px;
   justify-content: space-between;
 }
 
+/*here*/
 .icon-menu{
   display: none;
   text-decoration: none;
@@ -178,7 +180,6 @@ body{
 .total{
   background-color: rgb(255, 255, 255);
   width: 90%;
-  
   margin-top: 5%;
   margin-left: 5%;
   display: flex;
@@ -190,67 +191,145 @@ body{
   justify-content: space-around;
   font-size: 2.5rem;
   
-  
 
 }
-.category-box{
-  width: 100%;
-  padding: 5%;
+
+
+.cat-class{
   display: grid;
-  grid-template-columns: auto auto auto auto ;
-  justify-content: space-around;
-  
-  /* f */
-  
+  grid-template-columns: auto auto auto auto  ;
+  width: 95%;
+  margin-top: 20px;
+  margin: 20px auto; 
+  justify-content: space-around; 
+   
 }
-#box-img{
-  margin-top: 20%;
-  width: 90%;
-  height: 45vh;
+
+.box_{
+  width: 100%;
   background-color: white;
- 
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  
 }
-/* .box{margin-top: 3%;} */
-.box P{
+.box_ div{
+  text-align: center;
+}
+.box--img{
+  width: 100%;
+  height: 90%; 
+
+}
+
+.box--img img{
+  width: 300px;
+  max-height: 270px;
+}
+.name-cate p {
+  color: #744EF9;
+  font-size: 2rem;
+  font-weight:600 ;
+}
+
+.chiffre { 
+  display: flex;
+  width: 90%;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+
+}
+.chiffre div {
+  padding: 10px;
+  width: 30%;
+  background-color: #fff;
+}
+.chiffre div p{
+  font-size: 2rem;
+  color: var(--premierColor);
+  font-weight: 800;
+}
+
+.gain-jour,
+.gain-mois {
+  border-right: 1px solid var(--ThirdColor);
+}
+/* .box P{
 
  text-align: center;
  background-color: rgba(255, 255, 255, 0.61);
  height: 10vh;
- font-size:2.8rem;
- padding-top: 2vh;
- 
+ font-size:20px;
+ padding-top: 20px;
  width: 90%;
  
-  
-}
+} */
 .container-table th{padding: 3%;}
 .second-box{
   border-left:2px solid black ;
   border-right:2px solid black ;
-  
-  
-  
 }
 .sign-in{
   background-color: var(--mainColor);
-  display: flex;
+  display: none;
   flex-direction: column;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 600px;
 }
 #id00{
   display: flex;
   flex-direction: column;
 }
 .sign-mode{
-  background-color: var(--ThirdColor) !important;
+  background-color: var(--mainColor);
+  
 }
 
 /* responsive  */
+@media screen and (max-width : 1300px){
+
+  .cat-class{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 95%;
+    margin-top: 20px;
+    margin: 20px auto; 
+    justify-content: space-around; 
+     
+  }
+}
 @media screen and (max-width : 1000px){
-  html{font-size:45.5%;}
+  .chiffre div h3{
+    font-size: 15px;
+
+  }
+  .cat-class{
+    display: grid;
+    grid-template-columns: auto auto ;
+    width: 95%;
+    margin-top: 20px;
+    margin: 20px auto; 
+    justify-content: space-around; 
+     
+  }
 }
 @media screen and (max-width: 800px) {
-  html{
-    font-size: 38.5%;
+  .cat-class{
+    display: grid;
+    grid-template-columns: auto auto ;
+    width: 95%;
+    margin-top: 20px;
+    margin: 20px auto; 
+    justify-content: space-around; 
+     
   }
   .icon-menu{
     display: block;
@@ -286,18 +365,14 @@ body{
     color:var(--secondColor)
   }
   
-.alarm{
-  margin-left: 10%;
-  margin-top: 30px;
-}
 
 .name{
   margin-left: 0;
  
 }
 .name p{
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 600;
   align-items: center;
 }
 .name p:nth-child(2){
@@ -321,9 +396,6 @@ body{
   width: 100%;
   align-items: center;
 }
-.alarm{
-  display: none;
-}
 .mobile ul {
   justify-content: space-evenly;
   flex-direction: column;
@@ -336,10 +408,15 @@ body{
   width: 50%;
   padding: 8px;
   border-radius: 20px;
-  font-size: 18px;
+  text-align: center;   
 }
-.current a{
-  border-bottom: 4px solid var(--premierColor) !important;
+.mobile ul li a{
+  font-size: 1.4rem;
+  color: #000;
+  
+}
+.current {
+  background-color: var(--ThirdColor) !important;
 }
 .profil-pic img{
   width: 70px;
@@ -347,38 +424,44 @@ body{
 .img-box{
   height: 35vh;
 }
-.category-box{
+/* .category-box{
   display: grid;
   grid-template-columns: auto auto auto  ;
 
-
-
-
+} */
 }
-}
-@media screen and (max-width : 550px){
-  html{font-size:35.5%;}
-  .category-box{
+@media screen and (max-width : 600px){
+  /* .category-box{
     display: grid;
     grid-template-columns: auto  auto  ;
-  
-  
-  
-  
+
+  } */
+  .chiffre {
+    display: flex;
+    flex-direction: column;
   }
+  .chiffre div{
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .cat-class{
+    display: grid;
+    grid-template-columns: auto  ;
+    width: 95%;
+    margin-top: 20px;
+    margin: 20px auto; 
+    justify-content: space-around; 
+     
+  }
+
   /* .img-box{
     height: 20vh;
   } */
 }
 @media screen and (max-width : 450px){
-  html{font-size:40.5%;}
   .category-box{
-    
     display: grid;
     grid-template-columns: auto ;
-  
-  
-  
   
   }
   

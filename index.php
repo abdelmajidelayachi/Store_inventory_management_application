@@ -8,6 +8,9 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Accueil</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
+  </style>
   <link rel="stylesheet" href='style/style.css'>
 </head>
 
@@ -38,23 +41,23 @@
             </div>
           </form>
         </div>
+
       </div>
+
       <div class="container topnav" id="myTopnav">
-        <div class="alarm">
-          <i class="material-icons ">notifications_active</i>
-        </div>
         <div class="profil-pic">
           <img src="Image/profile-pic.jpg" alt="profile">
         </div>
         <div class="name">
+
           <p>EL Ayachi Abdelmajid</p>
-          <p id="aaa">Employé</p>
+          <p class="user">Employé</p>
         </div>
         <div class="nav-container mobile">
           <ul>
             <li class="current"><a href="#">Accueil</a></li>
-            <li><a href="category.php">catégorie</a></li>
-            <li><a href="#">Indisponible produit</a></li>
+            <li><a href="category.php">Catégorie</a></li>
+            <li><a href="Ajouter.php">Ajouter des produits</a></li>
             <li><a href="report.php">Rapport</a></li>
           </ul>
         </div>
@@ -65,73 +68,99 @@
       <ul>
         <li class="current"><a href="#">Accueil</a></li>
         <li><a href="category.php">catégorie</a></li>
-        <li><a href="#">Indisponible produit</a></li>
+        <li><a href="Ajouter.php">Ajouter des produits</a></li>
         <li><a href="report.php">Rapport</a></li>
       </ul>
     </div>
   </header>
   <main>
-  <!-- write code here   -->
-  
-  <aside>
-   
-   <table class="total">
-     <tr class="container-table">
-       <th >
-       <p>Les gains du jour</p>
-       <p>2000,500 DH</p>
-       </th>
-     
-       <th class="second-box">
-       <p>Return de mois</p>
-       <p>12.000,300 DH</p>
-       </th>
-      
-       <th>
-       <p>Total Sales de mois</p>
-       <p >60.980,119 DH</p>
-       </th>
-       </tr>
-   </table>
-    
- </aside>
-   <section class="category-box">
-     <div class="box">
-       <img src="image/img-33.png" alt="Machine a laver" id="box-img">
-      
-         <p>Machine a laver</p>
-      
-     </div>
-     <div  class="box"><img src="image/img-38.webp" alt="Télévision" id="box-img">
-   <p>Télévision</p></div>
-     <div  class="box"><img src="image/img-32.jpg" alt="Machine a coudre" id="box-img">
-   <p>Machine a coudre</p>
- </div>
-     <div  class="box">
-       <img src="image/img-1.png" alt="Four electrique" id="box-img">
-       <p>Four electrique</p>
-     </div>
-     <div  class="box">
-       <img src="image/img-11.jpg" alt="Machine à café" id="box-img">
-       <p>Machine à café</p>
-     </div>
-     <div  class="box">
-       <img src="image/img-35.png" alt="Réfrigérateur" id="box-img">
-       <p>Réfrigérateur</p>
-     </div>
-     <div  class="box">
-       <img src="image/img-13.jpg" alt="Inspirateur" id="box-img">
-       <p>Inspirateur </p>
-     </div>
-     <div  class="box">
-       <img src="image/img-30.jpg" alt="Machine a vaisselle" id="box-img">
-       <p>Machine a vaisselle</p>
-     </div>
-     
-   </section>
+    <!-- write code here   -->
+    <div class="chiffre">
+      <div class="gain-jour">
+        <h3>Les gains du jour</h3>
+        <p>2000,500 DH</p>
+      </div>
+      <div class="gain-mois">
+        <h3>Return de mois</h3>
+        <p>12.000,300 DH</p>
+      </div>
+      <div class="total-gain">
+        <h3>Total Sales de mois</h3>
+        <p>60.980,119 DH</p>
+      </div>
+    </div>
 
-  <div class="sign-in" id="compte">
+    <div class="cat-class">
+      <div class="box_">
+
+        <div class="box--img"><img src="image/wash/wc3.png" alt="Machine a laver" id="cat1"></div>
+        <div class="name-cate">
+          <p>Machine a laver</p>
+        </div>
+
+      </div>
+      <div class="box_">
+        <div class="box--img">
+          <img src="image/tv/tv2.jpg" alt="Télévision" id="cat2">
+        </div>
+        <div class="name-cate">
+          <p>Télévision</p>
+        </div>
+      </div>
+      <div class="box_">
+        <div class="box--img">
+          <img src="image/seo/sh2.jpg" alt="Machine a coudre" id="cat2">
+        </div>
+        <div class="name-cate">
+          <p>Machine a coudre</p>
+        </div>
+      </div>
+      <div class="box_">
+        <div class="box--img">
+          <img src="image/forno/oven1.png" alt="Four electrique" id="cat2">
+        </div>
+        <div class="name-cate">
+          <p>Four electrique</p>
+        </div>
+      </div>
+      <div class="box_">
+        <div class="box--img">
+          <img src="image/cafe/c2.jpg" alt="Machine à café" id="cat2">
+        </div>
+        <div class="name-cate">
+          <p>Machine à café</p>
+        </div>
+      </div>
+      <div class="box_">
+        <div class="box--img">
+          <img src="image/refrigerator/fr1.jpg" alt="Réfrigérateur" id="cat2">
+        </div>
+        <div class="name-cate">
+          <p>Réfrigérateur</p>
+        </div>
+      </div>
+      <div class="box_">
+        <div class="box--img">
+          <img src="image/clean/n2.jpg" alt="Inspirateur" id="cat2">
+        </div>
+        <div class="name-cate">
+          <p>Inspirateur</p>
+        </div>
+      </div>
+      <div class="box_">
+        <div class="box--img">
+          <img src="image/ice/ice-fr5.jpg" alt="Machine a vaisselle" id="cat2">
+        </div>
+        <div class="name-cate">
+          <p>Machine a vaisselle</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sign-in" id="compte">
       <form action="sign in" method="get" id="id00">
+        <button class="sign sign-in-btn">Sign in</button>
+        <button class="sign sign-up-btn">sign up</button>
         <label for="usrname">
           username
         </label>
@@ -145,25 +174,13 @@
         </label>
         <input type="text" name="username" id="usrname" placeholder="Enter votre username?">
       </form>
-  </div>
-
-
-
+    </div>
 
 
   </main>
 
   <!-- javascript code -->
-  <script>
-    function responsive() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "container") {
-        x.className += " topnav";
-      } else {
-        x.className = "container";
-
-      }
-    }
+  <script type="text/javaScript" src="js.js">
   </script>
 </body>
 
