@@ -1,12 +1,34 @@
-<?php 
-session_start();
-if(!isset($_SESSION['g'])){
-  header('location:login/connexion.php');
+<?php
+//  include 'sql/connexion.php';
+$host="localhost";
+$CIN="root";
+$PASSWORD="";
+$db="management_of_magasin";
+
+$conn=mysqli_connect($host,$CIN,$PASSWORD);
+$database=mysqli_select_db($conn,$db);
+if(isset($_POST['cin'])){
+  $cin=$_POST['cin'];
+  $password_=$_POST['password'];
+  $sql_login="SELECT * FROM `employe` WHERE CIN='".$cin."' AND PASSWORD='".$password_."'limit 1";
+  $result= mysqli_query($conn,$sql_login);
+  if(mysqli_num_rows($result)>0){
+    echo "<script type=\"text/javascript\">document.getElementById('login').className +=' verify-login';
+    document.querySelector('body').style.overflowY = 'scroll';</script>";
+    
+  }else{
+    echo "invalid inputs";
+    exit();
+  } 
+
 }
 
-
-
 ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +61,7 @@ if(!isset($_SESSION['g'])){
       </div>
 
 
-      <div class="search-container">
+      <div>
         <div class="search">
           <form action="./" method="get">
             <div class="searchbar">
@@ -54,13 +76,13 @@ if(!isset($_SESSION['g'])){
       </div>
 
       <div class="container topnav" id="myTopnav">
-        <div class="profil-pic" id="profil" onclick="profil()">
+        <div class="profil-pic">
           <img src="Image/profile-pic.jpg" alt="profile">
         </div>
         <div class="name">
 
-          <p id="login-user"><?php echo  $_SESSION['g'] ?></p>
-          <p class="user"><a href="login/logout.php" style="text-decoration: none;">Déconnecter</a></p>
+          <p>EL Ayachi Abdelmajid</p>
+          <p class="user">Employé</p>
         </div>
         <div class="nav-container mobile">
           <ul>
@@ -165,40 +187,49 @@ if(!isset($_SESSION['g'])){
         </div>
       </div>
     </div>
-<!-- 
-        $count=0;
-        
-        if($count==0){
-          echo $dt;
-          $connect=true;
-        }
-        
-
-    $database = mysqli_select_db($conn, $db);
-    if (isset($_POST['cin'])) {
-      $cin = $_POST['cin'];
-      $password_ = $_POST['password'];
-      $sql_login = "SELECT * FROM `employe` WHERE CIN='" . $cin . "' AND PASSWORD='" . $password_ . "'limit 1";
-      $result = mysqli_query($conn, $sql_login);
-      if (mysqli_num_rows($result) > 0) {
-        echo "<script>alert('you logged in')</script>";
-        $connect=true;
-        exit();
-      } else {
-        echo $dt;
-        $connect=false;
-        exit();
-      }
-    }
-    
-
-    ?> -->
-   
+    <!--sign html-->
+    <div class="sign-in" id="login">
+      <div class="form-box">
+        <div class="sign-in-up">
+          <div id="btn"></div>
+          <button class="toggle-btn" onclick="logIn()">Sign in</button>
+          <button class="toggle-btn" onclick="signUp()">sign up</button>
+        </div>
+        <!-- login form -->
+        <form action="" method="POST" id="log-in" class="input-group">
+          <label for="Cin">CIN</label>
+          <input type="text" name="cin" id="cin-sign-in" placeholder="Enter votre Cin?" class="input-field" required>
+          <label for="password">Mot de passe</label>
+          <div class="password-visibilty"><input type="password" name="password" id="password-log-in" placeholder="Enter le mot de passe?" class="input-field" required><span><input type="checkbox" name="show-hide-pass" id="show-hide-pass-log-in" onclick="showPassword(1)"></span></div>
+          <div class="inp">
+            <input type="checkbox" class="checkBox" name="check_box" id="rememb-pass"><span>Remember password</span>
+          </div>
+          <button type="submit" class="submit-btn">
+            Login
+          </button>
+        </form>
+        <form action="sign in" method="get" id="register" class="input-group">
+          <label for="usrname">Nom de utilisateur</label>
+          <input type="text" name="username" id="usrname-sign-up" placeholder="Enter votre username?" class="input-field" required>
+          <label for="Cin">CIN</label>
+          <input type="text" name="cin" id="cin-sign-up" placeholder="Enter votre Cin?" class="input-field" required>
+          <label for="usrname">Mot de passe</label>
+          <div class="password-visibilty"><input type="password" name="password" id="password-sign-up" placeholder="Create un mot de passe?" class="input-field" required><span><input type="checkbox" name="show-hide-pass" id="show-hide-pass-sign-up" onclick="showPassword(2)"></span></div>
+          <div class="inp">
+            <input type="checkbox" class="checkBox" name="check_box" id="term-condition"><span>I agree to term & condition</span>
+          </div>
+          <button type="submit" class="submit-btn">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
 
   </main>
 
   <!-- javascript code -->
   <script>
+
     function responsive() {
       var x = document.getElementById("myTopnav");
       // if (x.className === "container") {
@@ -210,13 +241,38 @@ if(!isset($_SESSION['g'])){
       x.className === "container" ? x.className += " topnav" : x.className = "container";
 
     }
-  
-      // let profil= document.getElementById('profil');
-      let loginUser= document.getElementById("login-user");
-   
+    var login=document.getElementById('log-in');
+    var register=document.getElementById('register');
+    var SwitchChange = document.getElementById('btn');
+    
+    function signUp(){
+      login.style.left= "-450px";
+      register.style.left="0px";
+      SwitchChange.style.left="110px";
+    }
+    function logIn(){
+      login.style.left= "0px";
+      register.style.left="450px";
+      SwitchChange.style.left="0px";  
+    }
+    var passwordLog = document.getElementById("password-log-in");
+    var passwordSign = document.getElementById("password-sign-up");
+    function showPassword(inOrUp) {
+  if (passwordLog.type === "password" && inOrUp===1) {
+    passwordLog.type = "text";
+  } else if (passwordLog.type === "text" && inOrUp===1)  {
+    passwordLog.type = "password";
+  }
+  if (passwordSign.type === "password" && inOrUp===2) {
+    passwordSign.type = "text";
+  } else if (passwordSign.type === "text" && inOrUp===2)  {
+    passwordSign.type = "password";
+  }
+}
+
 
   </script>
-
+  
 </body>
 
 </html>
