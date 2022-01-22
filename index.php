@@ -57,7 +57,7 @@
           <ul>
             <li class="current"><a href="#">Accueil</a></li>
             <li><a href="category.php">Catégorie</a></li>
-            <li><a href="#">Ajouter des produits</a></li>
+            <li><a href="Ajouter.php">Ajouter des produits</a></li>
             <li><a href="report.php">Rapport</a></li>
           </ul>
         </div>
@@ -68,7 +68,7 @@
       <ul>
         <li class="current"><a href="#">Accueil</a></li>
         <li><a href="category.php">catégorie</a></li>
-        <li><a href="#">Ajouter des produits</a></li>
+        <li><a href="Ajouter.php">Ajouter des produits</a></li>
         <li><a href="report.php">Rapport</a></li>
       </ul>
     </div>
@@ -180,18 +180,7 @@
   </main>
 
   <!-- javascript code -->
-  <script>
-    function responsive() {
-      var x = document.getElementById("myTopnav");
-      // if (x.className === "container") {
-      //   x.className += " topnav";
-      // } else {
-      //   x.className = "container";
-
-      // }
-      x.className === "container"?x.className += " topnav":x.className = "container";
-      
-    } 
+  <script type="text/javaScript" src="js.js">
   </script>
 </body>
 

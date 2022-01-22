@@ -11,6 +11,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html{
+  font-size: 65.2%;
+}
 
 body {
   background-color: var(--mainColor);
@@ -99,7 +102,7 @@ body {
 .name {
   margin-left: 20px;
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .profil-pic {
@@ -125,7 +128,7 @@ body {
 .nav-container ul li a {
   text-decoration: none;
   
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
 }
 .nav-container ul li a:hover {
@@ -183,7 +186,7 @@ body {
   width: 30%;
 }
 .chiffre div p{
-  font-size: 19px;
+  font-size: 2rem;
   color: var(--premierColor);
   font-weight: 800;
 }
@@ -204,7 +207,7 @@ th {
   text-align: center;
   padding: 1rem;
   background-color: #ffffff;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 td{
   font-weight: 400;
@@ -225,7 +228,7 @@ th {
   background-color: #ffffff;
   padding: 20px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.8rem;
   width: 90%;
 }
 
@@ -265,7 +268,7 @@ th {
     margin-left: 0;
   }
   .name p {
-    font-size: 16px;
+    font-size: 1.5rem;
     align-items: center;
   }
   .name p:nth-child(2) {
@@ -309,7 +312,7 @@ th {
     text-align: center;   
   }
   .mobile ul li a{
-    font-size: 14px;
+    font-size: 1.4rem;
     
   }
   .current a {

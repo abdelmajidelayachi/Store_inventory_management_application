@@ -12,6 +12,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html{
+  font-size: 65.2%;
+}
 /* ody{
   background-color: var(--mainColor);
   position: relative;
@@ -96,7 +99,7 @@
 .name{
   margin-left: 20px;
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .profil-pic{
@@ -124,7 +127,7 @@
 .nav-container ul li a{
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
 }
 .nav-container ul li a:hover{
@@ -221,12 +224,12 @@
 }
 
 .box--img img{
-  width: 100%;
+  width: 300px;
   max-height: 270px;
 }
 .name-cate p {
   color: #744EF9;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight:600 ;
 }
 
@@ -235,8 +238,11 @@
   width: 90%;
   margin-top: 50px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
 
 }
 .chiffre div {
@@ -245,7 +251,7 @@
   background-color: #fff;
 }
 .chiffre div p{
-  font-size: 19px;
+  font-size: 2rem;
   color: var(--premierColor);
   font-weight: 800;
 }
@@ -365,7 +371,7 @@
  
 }
 .name p{
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
   align-items: center;
 }
@@ -405,7 +411,7 @@
   text-align: center;   
 }
 .mobile ul li a{
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #000;
   
 }

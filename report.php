@@ -10,7 +10,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
   </style>
-  <title>Accueil</title>
+  <title>Report</title>
   <link rel="stylesheet" href="style/report.css">
 </head>
 
@@ -52,7 +52,7 @@
           <ul>
             <li><a href="index.php">Accueil</a></li>
             <li><a href="category.php">catégorie</a></li>
-            <li><a href="#">Ajouter des produits</a></li>
+            <li><a href="Ajouter.php">Ajouter des produits</a></li>
             <li class="mobile-current"><a href="#">Rapport</a></li>
           </ul>
         </div>
@@ -63,8 +63,8 @@
       <ul>
         <li><a href="index.php">Accueil</a></li>
         <li><a href="category.php">catégorie</a></li>
-        <li><a href="#">Ajouter des produits</a></li>
-        <li class="current"><a href="#">Rapport</a></li>
+        <li><a href="Ajouter.php">Ajouter des produits</a></li>
+        <li class="current"><a href="report.php">Rapport</a></li>
       </ul>
     </div>
   </header>
@@ -231,16 +231,7 @@
   </main>
 
   <!-- javascript code -->
-  <script>
-    function responsive() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "container") {
-        x.className += " topnav";
-      } else {
-        x.className = "container";
-
-      }
-    }
+  <script type="text/javaScript" src="js.js">
   </script>
 </body>
 
