@@ -25,6 +25,7 @@ if(!isset($_SESSION['g'])){
 
 <body class="sign-mode">
   <!-- header -->
+<<<<<<< HEAD
   <header>
     <div class="header-bar">
       <div class="container_mobile">
@@ -82,6 +83,9 @@ if(!isset($_SESSION['g'])){
       </ul>
     </div>
   </header>
+=======
+  <?php require_once 'nav-bar.php'; ?>
+>>>>>>> ATGUIRI
   <main>
     <!-- write code here   -->
     <div class="chiffre">
