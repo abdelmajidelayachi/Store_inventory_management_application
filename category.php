@@ -62,93 +62,78 @@ $id = 0;
         <li class="current-cat"><a href="#">Toutes</a></li>
         <?php 
         
-        $arr=array("");
         
-        foreach($row as $id=>$values){
-          
-            if($values['Category']!==$arr[$id]){
-              $arr[$id]=$values['Category'];
-            }
-            
-        // echo'<li><a href="#">'.$values['Category'].'</a></li>';
+        
+        foreach($row as $i=>$values){           
+         $arr[$i]= $values['Category'];
+        }
 
+        
+      $arr=array_unique($arr);
+        
+        foreach($arr as $i=>$values){
+          echo'<li><a href="#">'.$arr[$i].'</a></li>';
         }
-        foreach($arr as $id=>$values){
-          echo'<li><a href="#">'.$values[$id].'</a></li>';
-        }
+
+        
         ?>
         
       </ul>
      
     </div>
-<?php
-// echo $values['Category'];
+    <?php 
+    if ($stmt->rowCount() > 0) {
+
+// Do stuff
 
 
-    
-      
-?>
-    <section class="category" id="caty1">
-        <?php 
-      foreach($row as $id=>$values){
-     
-      if($values['Category']==='TV' ){
-     
-      
-      
-        ?>   
-        <div class="cotoner-child" id="produit1">
-          <button class="produit" onmouseover="afichage_over(this,<?php echo $id; ?>)" onmouseout="afichage_out(this,<?php echo $id; ?>)">
-            <img src="./uploads/<?php echo $values['images']; ?>" alt="<?php echo $values['images']; ?>">
-            <br><br>
-            <p><?php echo $values['Marque']; ?></p><br>
-            <h3><span id="tv1-price"> <?php echo $values['Prix']; ?></span> DH</h3><br>
-            <p><span id="tv1-num"><?php echo $values['Quantity']; ?></span> pieces</p>
-          </button>
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+  // 
+
+  $arr[$count_cate] = $row['Category'];
+
+  $countcate++;
+}
+$cate=array_unique( $arr);
 
 
-          <div class="afichage ident frame">
-            <button id="Modifier" onclick="Ajouter_prouduit()">Modifier</button>
-            <a href="Category.php?del=<?php echo $result[$i]->Id; ?>"><button id="Supprimer">Supprimer</button></a>
-          </div>
-        </div>
-      <?php $id++;
-      }} ?>
-    </section>
-<?php
-    if($values['Category']==='TV'){
-      foreach($row as $id=>$values){
+foreach( $cate as $cat_element){
+
+
+
 ?>
 
-<section class="category" id="caty1">
-        <?php 
-      
-     
-
-     
-      
-      
-        ?>   
-        <div class="cotoner-child" id="produit1">
-          <button class="produit" onmouseover="afichage_over(this,<?php echo $id; ?>)" onmouseout="afichage_out(this,<?php echo $id; ?>)">
-            <img src="./uploads/<?php echo $values['images']; ?>" alt="<?php echo $values['images']; ?>">
-            <br><br>
-            <p><?php echo $values['Marque']; ?></p><br>
-            <h3><span id="tv1-price"> <?php echo $values['Prix']; ?></span> DH</h3><br>
-            <p><span id="tv1-num"><?php echo $values['Quantity']; ?></span> pieces</p>
-          </button>
 
 
-          <div class="afichage ident frame">
-            <button id="Modifier" onclick="Ajouter_prouduit()">Modifier</button>
-            <a href="Category.php?del=<?php echo $result[$i]->Id; ?>"><button id="Supprimer">Supprimer</button></a>
-          </div>
-        </div>
-      <?php $id++;
-       ?>
-    </section>
-    <?php }}
-    ?>
+
+
+<section class="category" id="caty1" id="<?php echo $cat_element; ?>">
+<?php
+$resul = $pdo->query("SELECT * FROM produit WHERE Category LIKE '".$cat_element."' ");
+while ($row_cat = $resul->fetch(PDO::FETCH_ASSOC)) {
+
+
+?>
+  <div class="cotoner-child" id="produit1">
+    <button class="produit" onmouseover="afichage_over(this,<?php echo $id; ?>)" onmouseout="afichage_out(this,<?php echo $id; ?>)">
+      <img src="./uploads/<?php echo $row_cat['images']; ?>" alt="tv">
+      <br><br>
+      <p><?php echo $row_cat['Marque']; ?></p><br>
+      <h3><span id="tv1-price"> <?php echo $row_cat['Prix']; ?></span> DH</h3><br>
+      <p><span id="tv1-num"><?php echo $row_cat['Quantity']; ?></span> pieces</p>
+    </button>
+    <div class="afichage ident frame">
+                         <button id="Modifier" onclick="Ajouter_prouduit()">Modifier</button>
+      <!-- <a href="category.php?id=<?php echo $row_cat['Id']; ?>" ><button id="Modifier" onclick="Ajouter_prouduit()">Modifier</button></a> -->
+      <a href="category.php?del=<?php echo $row_cat['Id']; ?>"><button id="Supprimer">Supprimer</button></a>
+    </div>
+  </div>
+  <?php $id++;} ?>
+</section>
+
+<br>
+<?php }} ?>
 
 
 

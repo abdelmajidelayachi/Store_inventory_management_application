@@ -48,46 +48,46 @@ $stmt = $pdo->query('SELECT*FROM produit');
     <section class="contoner-produit heiden" id="sect-01">
       <div id="ajouterProduit">
         <?php
-        $userid = intval($_GET['Id']);
+        $userid = intval($_GET['id']);
         $sql = "SELECT `Category`,`Marque`,`Color`,`Quantity`,`Prix`,`image` FROM `produit` WHERE Id=:nouvelleId";
 
         $query = $pdo->prepare($sql);
         $query->bindParam(':nouvelleId', $userid, PDO::PARAM_STR);
-        $query->execute();
+        // $query->execute();
 
         $resultat = $query->fetchAll(PDO::FETCH_OBJ);
-        foreach ($resultat as $row) {
+        foreach ($resultat as $row =>$valeur)  {
         ?>
-          <form action="" class="config" method="POST" action="page.php">
+          <form action="" class="config" method="POST">
 
             <div class="cotoner-child">
               <label>Image :</label>
-              <input id="Image" class="input-parts" name="images" type="file" placeholder="./image/photo.png" width="48" height="48" value="<?php echo $row->images ?>">
+              <input id="Image" class="input-parts" name="images" type="file" placeholder="./image/photo.png" width="48" height="48" value="<?php echo $valeur['image'] ?>">
             </div>
 
             <div class="cotoner-child">
               <label>Category :</label>
-              <input class="input-parts" type="text" name="Category" id="category" value="<?php echo $row->Category ?>">
+              <input class="input-parts" type="text" name="Category" id="category" value="<?php echo $valeur['Category'] ?>">
             </div>
 
             <div class="cotoner-child">
               <label>Marque :</label>
-              <input class="input-parts" type="text" name="Marque" id="marque" value="<?php echo $row->Marque ?>">
+              <input class="input-parts" type="text" name="Marque" id="marque" value="<?php echo $valeur['Marque'] ?>">
             </div>
 
             <div class="cotoner-child">
               <label>Color :</label>
-              <input class="input-parts" type="text" name="Color" id="color" value="<?php echo $row->Color ?>">
+              <input class="input-parts" type="text" name="Color" id="color" value="<?php echo $valeur['Color'] ?>">
             </div>
 
             <div class="cotoner-child">
               <label>Quantity :</label>
-              <input class="input-parts" type="number" name="Quantity" id="quantity" min="1" value="<?php echo $row->Quantity ?>">
+              <input class="input-parts" type="number" name="Quantity" id="quantity" min="1" value="<?php echo $valeur['Contity'] ?>">
             </div>
 
             <div class="cotoner-child">
               <label>Prix :</label>
-              <input class="input-parts" type="number" name="Prix" id="prix" min="1" value="<?php echo $row->Prix ?>">
+              <input class="input-parts" type="number" name="Prix" id="prix" min="1" value="<?php echo $valeur['Prix'] ?>">
             </div>
           <?php } ?>
           </form>
