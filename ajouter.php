@@ -74,59 +74,7 @@ $stmt=$pdo->query('SELECT * FROM produit');
 <body>
 
     <!-- header -->
-    <header>
-        <div class="header-bar">
-            <div class="container_mobile">
-                <div class="logo">
-                    <img src="./Image/logo-ic.svg" alt="">
-                </div>
-                <div class="three_bars">
-                    <a href="javascript:void(0);" class="icon-menu" onclick="responsive()">
-                        <i class="fa fa-bars fa-2x"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="search">
-                <form action="./" method="get">
-                    <div class="searchbar">
-                        <input type="text" class="searchbar__input" name="q" placeholder="Cherche produit">
-                        <button type="submit" class="searchbar__button">
-                            <i class="material-icons">search</i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="container topnav" id="myTopnav">
-
-                <div class="profil-pic">
-                    <img src="Image/profile-pic.jpg" alt="profile">
-                </div>
-                <div class="name">
-                    <p>EL Ayachi Abdelmajid</p>
-                    <p class="user">Employé</p>
-                </div>
-                <div class="nav-container mobile">
-                    <ul>
-                        <li><a href="index.php">Accueil</a></li>
-                        <li class="current.php"><a href="Category.php">catégorie</a></li>
-                        <li><a href="Ajouter.php">Ajouter des produits</a></li>
-                        <li><a href="report.php">Rapport</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <div class="nav-container disktop">
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li class="current.php"><a href="Category.php">Catégorie</a></li>
-                <li><a href="ajouter.php">Ajouter des produits</a></li>
-                <li><a href="report.php">Rapport</a></li>
-            </ul>
-        </div>
-    </header>
+    <?php require_once 'nav-bar.php'; ?>
     <div id="form">
         <section id="sect-01" style="display:blok;">
             <div id="ajouterProduit">
@@ -156,7 +104,7 @@ $stmt=$pdo->query('SELECT * FROM produit');
                     </div>
                     <div class="cotoner-child">
                         <label>Prix :</label>
-                        <input class="input-parts" type="number" name="Prix" id="prix" min="1" required>
+                        <input class="input-parts" type="number" name="Prix" id="prix" min="1" >
                     </div>
                     <div class="save">
                         <button id="retour">Retour</button>
