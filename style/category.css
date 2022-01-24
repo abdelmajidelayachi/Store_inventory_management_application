@@ -284,31 +284,35 @@ body{
 /* -----------Ajouter un produit------------------ */
 .contoner-produit{
   position: fixed;
-  
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.808);
   bottom: 0%;
 }
 #ajouterProduit{
- /* position: absolute; */
- width: 50%;
- height: 90vh;
- font-size: rem;
- padding: 2%;
+ position: relative;
+ width: 60vw;
+ /* height: 100%; */
+ font-size: 1.5rem;
+ padding: 3%;
+ /* padding-top: %; */
  border-radius: 5%;
  display: flex;
  flex-direction: column;
  justify-content: space-evenly;
  align-items: center;
- margin-left: 20%;
+ /* margin-left: 20%; */
  margin-top: 5%;
+ left: 20%;
+
+
  background: white;
 }
 
 .config{
   background-color: white;
-  width: 80%;
+  width: 90%;
   
   /* border-style: dashed; */
   /* border-style: dashed; */
@@ -318,7 +322,7 @@ body{
   border: 1px solid black;
   
   width: 70%;
-  padding: 1%;
+  padding: 1.5%;
   font-size: 1.5rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
@@ -332,32 +336,38 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1%;
-  font-size: 1.7rem;
+  padding: 2%;
+  font-size: 1.6rem;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
 }
 .save{
-  width: 90%;
+
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  margin-top: 5%;
+  justify-content: space-evenly;
+
   }
 .save button{
-  width: 110px;
+  width: 25%;
   height: 40px;
   font-weight: 700;
   margin-top: 5%;
   border-radius: 10px;
+  font-size: 1.2rem;
   
   
 }
-#ajouter{
+#ajouter {
   background-color: #5D78FF;
 }
 
 /* responsive  */
 @media screen and (max-width: 800px) {
+  html{
+    font-size: 55.2%;
+  }
   .icon-menu{
     display: block;
     margin-top: 15px;
@@ -458,3 +468,26 @@ body{
 
 
 }
+@media screen and (max-width: 600px) {
+ html{
+  font-size:48.5%;
+ }
+ .save button{
+ 
+  height: 30px;
+  font-weight: 700;
+  margin-top: 5%;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  
+}}
+@media screen and (max-width: 450px) {
+  html{
+   font-size:48.5%;
+  }
+  #ajouterProduit{
+    position: relative;
+    width: 80vw;
+    height: 100%;
+    left:10% ;
+}}
