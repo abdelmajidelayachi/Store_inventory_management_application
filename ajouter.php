@@ -7,7 +7,6 @@ require_once 'page.php';
 // ajouter un produit depuis le formulaire
 
 
-
 if (
     isset($_POST['ajouter'])
     && !empty($_POST['Category'])
@@ -53,9 +52,12 @@ $stmt=$pdo->query('SELECT * FROM produit');
 
 ?>
 
-
-
-
+<?php 
+session_start();
+if(!isset($_SESSION['g'])){
+  header('location:login/connexion.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,8 +69,14 @@ $stmt=$pdo->query('SELECT * FROM produit');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Ajouter des produits</title>
     <link rel="stylesheet" href="style/Category.css">
+    <link rel="stylesheet" href="style/navigation.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
+        .disktop .current-ajouter   a{
+  color: #000 !important;
+  border-bottom: 4px solid #F4FAF9 !important; 
+
+}
     </style>
 </head>
 

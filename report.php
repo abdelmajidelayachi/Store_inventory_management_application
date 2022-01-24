@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(!isset($_SESSION['g'])){
+  header('location:login/connexion.php');
+}
+?>  
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +20,13 @@
   <title>Report</title>
   <link rel="stylesheet" href="style/report.css">
 </head>
+<style>
+   .disktop .current-report a{
+  color: #000 !important;
+  border-bottom: 4px solid #F4FAF9 !important; 
+
+}
+</style>
 
 <body>
   <!-- header -->

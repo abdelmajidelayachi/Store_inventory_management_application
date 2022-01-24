@@ -1,3 +1,11 @@
+
+<?php 
+
+if(!isset($_SESSION['g'])){
+  header('location:login/connexion.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +30,10 @@
       </div>
 
       <div class="search">
-        <form action="./" method="get">
+        <form action="category.php" method="GET">
           <div class="searchbar">
-            <input type="text" class="searchbar__input" name="q" placeholder="Cherche produit">
-            <button type="submit" class="searchbar__button">
+            <input type="text" class="searchbar__input" name="search" placeholder="Cherche produit">
+            <button type="submit" name="submit-search" class="searchbar__button">
               <i class="material-icons">search</i>
             </button>
           </div>
@@ -38,15 +46,15 @@
           <img src="Image/profile-pic.jpg" alt="profile">
         </div>
         <div class="name">
-          <p>EL Ayachi Abdelmajid</p>
-          <p class="user">Employé</p>
+          <p><?php echo $_SESSION['g']?></p>
+          <p class="user"><a href="login/logout.php" style="text-decoration: none;">Déconnecter</a> </p>
         </div>
         <div class="nav-container mobile">
           <ul>
-            <li><a href="index.php">Accueil</a></li>
-            <li class="current.php"><a href="category.php">catégorie</a></li>
-            <li><a href="Ajouter.php">Ajouter des produits</a></li>
-            <li><a href="report.php">Rapport</a></li>
+            <li class="current-index"><a href="index.php">Accueil</a></li>
+            <li class="current-category"><a href="category.php">catégorie</a></li>
+            <li class="current-ajouter"><a href="Ajouter.php">Ajouter des produits</a></li>
+            <li class="current-report"><a href="report.php">Rapport</a></li>
           </ul>
         </div>
       </div>
@@ -54,10 +62,10 @@
     </div>
     <div class="nav-container disktop">
       <ul>
-        <li><a href="index.php">Accueil</a></li>
-        <li class="current.php"><a href="category.php">Catégorie</a></li>
-        <li><a href="Ajouter.php">Ajouter des produits</a></li>
-        <li><a href="report.php">Rapport</a></li>
+        <li class="current-index" ><a href="index.php">Accueil</a></li>
+        <li class="current-category"><a href="category.php">Catégorie</a></li>
+        <li class="current-ajouter"><a href="Ajouter.php">Ajouter des produits</a></li>
+        <li class="current-report"><a href="report.php">Rapport</a></li>
       </ul>
     </div>
   </header>

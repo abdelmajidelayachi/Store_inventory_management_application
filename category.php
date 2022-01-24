@@ -1,13 +1,31 @@
+
+
+<?php 
+session_start();
+if(!isset($_SESSION['g'])){
+  header('location:login/connexion.php');
+}
+?>
+
 <?php
 
 require_once 'page.php';
-
-// $conn->satAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 $stmt = $pdo->query('SELECT*FROM produit');
 $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
+// $conn->satAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+$pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
 
+if($pageWasRefreshed ) {
+  $stmt = $pdo->query('SELECT*FROM produit');
+  $row = $stmt->fetchAll(PDO::FETCH_ASSOC);;
+} else {
+  include('search.php');
+}
+
+$stmt_b = $pdo->query('SELECT*FROM produit');
+$row_b = $stmt_b->fetchAll(PDO::FETCH_ASSOC);
 
 
 
@@ -43,10 +61,15 @@ $index = 0;
   <link rel="stylesheet" href="style/category.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
+    .disktop .current-category a{
+  color: #000 !important;
+  border-bottom: 4px solid #F4FAF9 !important; 
+
+}
   </style>
 </head>
 
-<body></body>
+<body>
 <!-- header -->
 <?php require_once 'nav-bar.php'; ?>
 
@@ -54,22 +77,26 @@ $index = 0;
   <!-- write code here   -->
   <div class="bar-container">
     <ul>
-      <li class="current-cat"><a href="#">Toutes</a></li>
+      <li class="current-cat"><a href="category.php">Toutes</a></li>
       <?php
 
+      foreach ($row_b as $i => $values) {
+        $arr_b[$i] = $values['Category'];
+      }
+      
 
+      $arr_b = array_unique($arr_b);
 
+      foreach ($arr_b as $i => $values) {
+        echo '<li onclick="location.reload();
+        "><a href="#'.$arr_b[$i].'">' . $arr_b[$i] . '</a></li>';
+      }
       foreach ($row as $i => $values) {
         $arr[$i] = $values['Category'];
       }
 
 
       $arr = array_unique($arr);
-
-      foreach ($arr as $i => $values) {
-        echo '<li><a href="#">' . $arr[$i] . '</a></li>';
-      }
-
 
       ?>
 
@@ -103,7 +130,7 @@ $index = 0;
 
 
 
-      <section class="category" id="caty1" id="<?php echo $cat_element; ?>">
+      <section class="category" id="caty1" id="<?php echo $cat_element; ?>"><a name="<?php echo $cat_element; ?>">
         <?php
         $resul = $pdo->query("SELECT * FROM produit WHERE Category LIKE '" . $cat_element . "' ");
         while ($row_cat = $resul->fetch(PDO::FETCH_ASSOC)) {
@@ -130,14 +157,17 @@ $index = 0;
               <a href="category.php?del=<?php echo $row_cat['Id']; ?>">
                 <button type="submit" id="Supprimer">Supprimer</button></a>
             </div>
-          </div>
+          </div></a>
         <?php $index++;
         } ?>
       </section>
 
       <br>
   <?php }
-  } ?>
+ } else
+    echo "<h3><aucune produit</h3>"
+  
+   ?>
 
 
 

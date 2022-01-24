@@ -12,9 +12,7 @@
   box-sizing: border-box;
   font-family: "Poppins";
 }
-html{
-  font-size: 65.2%;
-}
+
 
 body{
   background-color: var(--mainColor);

@@ -5,7 +5,6 @@ $user = 'root';
 $pass = '';
 $dbname='les-produit';
 
-
 try{
     $dsn = 'mysql:host='.$host.';dbname='.$dbname;
     $pdo = new PDO($dsn,$user,$pass);
@@ -18,7 +17,5 @@ catch(PDOException $e){
 
     echo"Pas de connexion a la base de donnees".$e-> getMessage();
 }
-
-
 
 ?>

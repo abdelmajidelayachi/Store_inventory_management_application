@@ -1,10 +1,10 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION['g'])){
+if (!isset($_SESSION['g'])) {
   header('location:login/connexion.php');
 }
 
-
+require_once('page.php');
 
 ?>
 <!DOCTYPE html>
@@ -22,94 +22,73 @@ if(!isset($_SESSION['g'])){
   </style>
   <link rel="stylesheet" href='style/style.css'>
 </head>
+<style>
+  .disktop .current-index a {
+    color: #000 !important;
+    border-bottom: 4px solid #F4FAF9 !important;
+
+  }
+</style>
 
 <body class="sign-mode">
   <!-- header -->
   <?php require_once 'nav-bar.php'; ?>
   <main>
+    <?php
+
+    $stmt_b = $pdo->query('SELECT*FROM produit');
+    $row_b = $stmt_b->fetchAll(PDO::FETCH_ASSOC);
+
+
+    $prix_total = 0;
+    foreach ($row_b as $i => $values) {
+      $arr_b[$i] = $values['Category'];
+      $prod_num[] = $values['Marque'];
+      $prix_total = $prix_total + $values['Quantity'] * $values['Prix'];
+    }
+    $arr_b = array_unique($arr_b);
+
+    ?>
+
+    ?>
     <!-- write code here   -->
     <div class="chiffre">
       <div class="gain-jour">
-        <h3>Les gains du jour</h3>
-        <p>2000,500 DH</p>
+        <h1>Nombre des catégorie</h1>
+        <p><?php echo sizeof($arr_b); ?></p>
       </div>
       <div class="gain-mois">
-        <h3>Return de mois</h3>
-        <p>12.000,300 DH</p>
+        <h1>Nombre des produits</h1>
+        <p><?php echo sizeof($prod_num); ?></p>
       </div>
       <div class="total-gain">
-        <h3>Total Sales de mois</h3>
-        <p>60.980,119 DH</p>
+        <h1>Total de montants au store</h1>
+        <p><?php echo $prix_total; ?> DH</p>
       </div>
     </div>
+
 
     <div class="cat-class">
-      <div class="box_">
+      <?php
+      foreach ($arr_b as  $value) {
+        $stmt_c = $pdo->query("SELECT * FROM produit WHERE Category LIKE '" . $value . "'");
+        $row_c = $stmt_c->fetch(PDO::FETCH_ASSOC);
 
-        <div class="box--img"><img src="image/wash/wc3.png" alt="Machine a laver" id="cat1"></div>
-        <div class="name-cate">
-          <p>Machine a laver</p>
-        </div>
+      ?>
 
-      </div>
-      <div class="box_">
-        <div class="box--img">
-          <img src="image/tv/tv2.jpg" alt="Télévision" id="cat2">
+        <div class="box_">
+          
+          <div class="box--img"><img src="./uploads/<?php echo $row_c['images']; ?>" alt="Machine a laver" id="cat1"></div>
+          <div class="name-cate">
+            <p><?php echo $value; ?></p>
+          </div>
+
         </div>
-        <div class="name-cate">
-          <p>Télévision</p>
-        </div>
-      </div>
-      <div class="box_">
-        <div class="box--img">
-          <img src="image/seo/sh2.jpg" alt="Machine a coudre" id="cat2">
-        </div>
-        <div class="name-cate">
-          <p>Machine a coudre</p>
-        </div>
-      </div>
-      <div class="box_">
-        <div class="box--img">
-          <img src="image/forno/oven1.png" alt="Four electrique" id="cat2">
-        </div>
-        <div class="name-cate">
-          <p>Four electrique</p>
-        </div>
-      </div>
-      <div class="box_">
-        <div class="box--img">
-          <img src="image/cafe/c2.jpg" alt="Machine à café" id="cat2">
-        </div>
-        <div class="name-cate">
-          <p>Machine à café</p>
-        </div>
-      </div>
-      <div class="box_">
-        <div class="box--img">
-          <img src="image/refrigerator/fr1.jpg" alt="Réfrigérateur" id="cat2">
-        </div>
-        <div class="name-cate">
-          <p>Réfrigérateur</p>
-        </div>
-      </div>
-      <div class="box_">
-        <div class="box--img">
-          <img src="image/clean/n2.jpg" alt="Inspirateur" id="cat2">
-        </div>
-        <div class="name-cate">
-          <p>Inspirateur</p>
-        </div>
-      </div>
-      <div class="box_">
-        <div class="box--img">
-          <img src="image/ice/ice-fr5.jpg" alt="Machine a vaisselle" id="cat2">
-        </div>
-        <div class="name-cate">
-          <p>Machine a vaisselle</p>
-        </div>
-      </div>
+      <?php } ?>
+              
+      
     </div>
-<!-- 
+    <!-- 
         $count=0;
         
         if($count==0){
@@ -137,7 +116,7 @@ if(!isset($_SESSION['g'])){
     
 
     ?> -->
-   
+
 
   </main>
 
