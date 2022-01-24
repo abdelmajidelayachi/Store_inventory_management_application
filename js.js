@@ -1,3 +1,6 @@
+
+
+
 function responsive() {
     var x = document.getElementById("myTopnav");
     if (x.className === "container") {
@@ -10,14 +13,10 @@ function responsive() {
 
 //   --------------------------------------------------------------------------------------------------------------------
 
-function Ajouter_prouduit() {
-    let form = document.getElementById("sect-01");
-    if (form.className === "heiden") {
-      form.className = "contoner-produit ";
-    }else{
-      form.className ="heiden";
-    }
-  }
+// var btn =  document.getElementById('Modifier');
+
+
+
 
   var affichage = document.querySelectorAll('.ident');
 
@@ -29,5 +28,8 @@ function Ajouter_prouduit() {
   function afichage_out(obj, id) {
     affichage[id].className += ' afichage'
   }
+  retour.addEventListener("click", ()=>{
+    window.location.href='category.php'
+  })
   //------------------------------------------------------------------------------------------------------------
 
