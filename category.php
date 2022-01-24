@@ -23,7 +23,6 @@ if (isset($_REQUEST['del'])) {
 
   echo "<script>alert('Vous avez supprimer un produit')</script>";
   echo "<script>window.location.href='category.php'</script>";
-
 }
 
 
@@ -45,104 +44,108 @@ $id = 0;
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Category</title>
-  <link rel="stylesheet" href="style/category.css">
+  <link rel="stylesheet" href="style/report.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
   </style>
 </head>
 
 <body></body>
-  <!-- header -->
-  <?php require_once 'nav-bar.php'; ?>
+<!-- header -->
+<?php require_once 'nav-bar.php'; ?>
 
-  <main>
-    <!-- write code here   -->
-    <div class="bar-container">
-      <ul>
-        <li class="current-cat"><a href="#">Toutes</a></li>
-        <?php 
-        
-        
-        
-        foreach($row as $i=>$values){           
-         $arr[$i]= $values['Category'];
-        }
-
-        
-      $arr=array_unique($arr);
-        
-        foreach($arr as $i=>$values){
-          echo'<li><a href="#">'.$arr[$i].'</a></li>';
-        }
-
-        
-        ?>
-        
-      </ul>
-     
-    </div>
-    <?php 
-    if ($stmt->rowCount() > 0) {
-
-// Do stuff
-
-
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-
-  // 
-
-  $arr[$count_cate] = $row['Category'];
-
-  $countcate++;
-}
-$cate=array_unique( $arr);
-
-
-foreach( $cate as $cat_element){
+<main>
+  <!-- write code here   -->
+  <div class="bar-container">
+    <ul>
+      <li class="current-cat"><a href="#">Toutes</a></li>
+      <?php
 
 
 
-?>
+      foreach ($row as $i => $values) {
+        $arr[$i] = $values['Category'];
+      }
 
 
+      $arr = array_unique($arr);
+
+      foreach ($arr as $i => $values) {
+        echo '<li><a href="#">' . $arr[$i] . '</a></li>';
+      }
 
 
+      ?>
 
-<section class="category" id="caty1" id="<?php echo $cat_element; ?>">
-<?php
-$resul = $pdo->query("SELECT * FROM produit WHERE Category LIKE '".$cat_element."' ");
-while ($row_cat = $resul->fetch(PDO::FETCH_ASSOC)) {
+    </ul>
 
-
-?>
-  <div class="cotoner-child" id="produit1">
-    <button class="produit" onmouseover="afichage_over(this,<?php echo $id; ?>)" onmouseout="afichage_out(this,<?php echo $id; ?>)">
-      <img src="./uploads/<?php echo $row_cat['images']; ?>" alt="tv">
-      <br><br>
-      <p><?php echo $row_cat['Marque']; ?></p><br>
-      <h3><span id="tv1-price"> <?php echo $row_cat['Prix']; ?></span> DH</h3><br>
-      <p><span id="tv1-num"><?php echo $row_cat['Quantity']; ?></span> pieces</p>
-    </button>
-    <div class="afichage ident frame">
-                         <button id="Modifier" onclick="Ajouter_prouduit()">Modifier</button>
-      <!-- <a href="category.php?id=<?php echo $row_cat['Id']; ?>" ><button id="Modifier" onclick="Ajouter_prouduit()">Modifier</button></a> -->
-      <a href="category.php?del=<?php echo $row_cat['Id']; ?>"><button id="Supprimer">Supprimer</button></a>
-    </div>
   </div>
-  <?php $id++;} ?>
-</section>
+  <?php
+  if ($stmt->rowCount() > 0) {
 
-<br>
-<?php }} ?>
-
+    // Do stuff
 
 
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+      // 
+
+      $arr[$count_cate] = $row['Category'];
+
+      $countcate++;
+    }
 
 
-  </main>
 
-  <?php require_once 'Modefer_produit.php'; ?>
-  <!-- javascript code -->
+    foreach ($arr as $cat_element) {
+
+
+
+  ?>
+
+
+
+
+
+      <section class="category" id="caty1" id="<?php echo $cat_element; ?>">
+        <?php
+        $resul = $pdo->query("SELECT * FROM produit WHERE Category LIKE '" . $cat_element . "' ");
+        while ($row = $resul->fetch(PDO::FETCH_ASSOC)) {
+
+
+        ?>
+          <div class="cotoner-child" id="produit1">
+            <button class="produit" onmouseover="afichage_over(this,<?php echo $id; ?>)" onmouseout="afichage_out(this,<?php echo $id; ?>)">
+              <img src="./uploads/<?php echo $row['images']; ?>" alt="tv">
+              <br><br>
+              <p><?php echo $row['Marque']; ?></p><br>
+              <h3><span id="tv1-price"> <?php echo $row['Prix']; ?></span> DH</h3><br>
+              <p><span id="tv1-num"><?php echo $row['Quantity']; ?></span> pieces</p>
+            </button>
+            <div class="afichage ident frame">
+            <a href="Modefer_produit.php?id=<?php echo $row['Id']; ?>">
+              <button id="Modifier">Modifier</button>
+            </a>
+              <!-- <a href="category.php?id=<php echo $row['Id']; ?>" ><button id="Modifier" onclick="Ajouter_prouduit()">Modifier</button></a> -->
+              <a href="category.php?del=<?php echo $row['Id']; ?>"><button id="Supprimer">Supprimer</button></a>
+            </div>
+          </div>
+        <?php $id++;
+        } ?>
+      </section>
+
+      <br>
+  <?php }
+  } ?>
+
+
+
+
+
+</main>
+
+
+<!-- javascript code -->
 
 </body>
 <script type="text/javaScript" src="js.js">
