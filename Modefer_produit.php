@@ -18,26 +18,26 @@ if (
   $Quantity = $_POST['Quantity'];
   $Color = $_POST['Color'];
   $Prix = $_POST['Prix'];
-  $images = $_POST['profil'];
 
 
 
 
 
-  $sql = "UPDATE `produit` SET `Category`=:Category, `Marque`=:Marque, `Color`=:Color, `Quantity`=:Quantity, `Prix`=:Prix, `images`=:profil WHERE `Id`=:Id";
+
+  $sql = "UPDATE `produit` SET `Category`=:Category, `Marque`=:Marque, `Color`=:Color, `Quantity`=:Quantity, `Prix`=:Prix WHERE `Id`=:Id";
 
   $query = $pdo->prepare($sql);
-  $query->bindParam(':profil', $images, PDO::PARAM_STR);
+
   $query->bindParam(':Category', $Category, PDO::PARAM_STR);
-  $query->bindParam(':Marque', $Marque, PDO::PARAM_STR); 
+  $query->bindParam(':Marque', $Marque, PDO::PARAM_STR);
   $query->bindParam(':Quantity', $Quantity, PDO::PARAM_STR);
   $query->bindParam(':Color', $Color, PDO::PARAM_STR);
   $query->bindParam(':Prix', $Prix, PDO::PARAM_STR);
   $query->bindParam(':Id', $userid, PDO::PARAM_STR);
 
   $query->execute();
-  echo "<script>alert('Vous avez modifier un produit')</script>";
-  // echo "<script>window.location.href='category.php'</script>";
+  // echo "<script>alert('Vous avez modifier un produit')</script>";
+  echo "<script>window.location.href='category.php'</script>";
 }
 ?>
 
@@ -49,7 +49,7 @@ if (
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/category.css">
+  <link rel="stylesheet" href="style/ajouter.css">
   <title>ModeferProduit</title>
 </head>
 
@@ -74,11 +74,10 @@ if (
 
 
 
-            <div class="cotoner-child">
+            <!-- <div class="cotoner-child">
               <label>Image :</label>
               <input class="input-parts" type="file" class="form-control mt-3" name="profil" accept="*/image" value="<?php echo $row->images ?>">
-              <!-- <input id="Image" class="input-parts" name="images" type="file" width="48" height="48"  accept="*/image"> -->
-            </div>
+            </div> -->
 
             <div class="cotoner-child">
               <label>Category :</label>
@@ -125,4 +124,4 @@ if (
 
 </body>
 <script type="text/javaScript" src="js.js">
-  </html>
+  </html>*

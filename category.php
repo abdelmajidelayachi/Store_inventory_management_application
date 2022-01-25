@@ -43,13 +43,14 @@ if (isset($_REQUEST['del'])) {
   echo "<script>window.location.href='category.php'</script>";
 }
 $index = 0;
+$id = 0;
 ?>
 
 
 
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -58,7 +59,7 @@ $index = 0;
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Category</title>
-  <link rel="stylesheet" href="style/category.css">
+  <link rel="stylesheet" href="style/report.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
     .disktop .current-category a{
@@ -146,18 +147,13 @@ $index = 0;
               <p><span id="tv1-num"><?php echo $row_cat['Quantity']; ?></span> pieces</p>
             </button>
             <div class="afichage ident frame">
-              <!-- <button id="Modifier" onclick="Ajouter_prouduit()" name="updatebtn">Modifier</button> -->
               <a href="Modefer_produit.php?id=<?php echo $row_cat['Id']; ?>">
-              <button type="submit" id="Modifier" duoblclick="Ajouter_prouduit()">
-                Modifier 
-              </button>
+                <button id="Modifier">Modifier</button>
               </a>
-              
-
-              <a href="category.php?del=<?php echo $row_cat['Id']; ?>">
-                <button type="submit" id="Supprimer">Supprimer</button></a>
+              <!-- <a href="category.php?id=<php echo $row['Id']; ?>" ><button id="Modifier" onclick="Ajouter_prouduit()">Modifier</button></a> -->
+              <a href="category.php?del=<?php echo $row_cat['Id']; ?>"><button id="Supprimer">Supprimer</button></a>
             </div>
-          </div></a>
+          </div>
         <?php $index++;
         } ?>
       </section>
@@ -165,7 +161,7 @@ $index = 0;
       <br>
   <?php }
  } else
-    echo "<h3><aucune produit</h3>"
+    // echo "<h3><aucune produit</h3>"
   
    ?>
 
@@ -176,9 +172,6 @@ $index = 0;
 </main>
 
 
-<!-- javascript code -->
-
-</body>
 <!-- javascript code -->
 
 </body>

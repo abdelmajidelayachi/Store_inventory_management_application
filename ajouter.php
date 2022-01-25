@@ -68,8 +68,7 @@ if(!isset($_SESSION['g'])){
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Ajouter des produits</title>
-    <link rel="stylesheet" href="style/Category.css">
-    <link rel="stylesheet" href="style/navigation.css">
+    <link rel="stylesheet" href="style/ajouter.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
         .disktop .current-ajouter   a{
@@ -91,8 +90,7 @@ if(!isset($_SESSION['g'])){
                 <form class="config" method="post" action="" enctype="multipart/form-data">
                     <div class="cotoner-child">
                         <label>Image :</label>
-                        <input class="input-parts" type="file" class="form-control mt-3" name="profil" accept="*/image" value="src">
-                        
+                        <input type="file" class="input-parts mt-3" name="profil" accept="*/image">
                     </div>
 
                     <div class="cotoner-child">
@@ -119,8 +117,7 @@ if(!isset($_SESSION['g'])){
                     <div class="save">
                         
                         <button id="retour">Retour</button>
-                        
-                        <button type="submit" class="btn btn-primary mt-3" name="ajouter" id="Modifier">Enregistrer</button>
+                        <button type="submit" class="btn btn-primary mt-3" name="ajouter" id="ajouter">Enregistrer</button>
                     </div>
                 </form>
 

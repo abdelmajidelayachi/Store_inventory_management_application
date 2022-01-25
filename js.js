@@ -28,8 +28,5 @@ function responsive() {
   function afichage_out(obj, id) {
     affichage[id].className += ' afichage'
   }
-  retour.addEventListener("click", ()=>{
-    window.location.href='category.php'
-  })
-  //------------------------------------------------------------------------------------------------------------
+
 

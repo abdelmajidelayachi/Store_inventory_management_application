@@ -416,6 +416,7 @@ body{
   display: none;
 }
 .mobile {
+  
   display: block;
   width: 100%;
 }

@@ -1,98 +1,268 @@
 :root {
-  --mainColor: #E8EFF9;
-  --premierColor: #744EF9;
-  --secondColor: #5D78FF;
-  --ThirdColor: #C4C4C4;  
-}
-
-
-*{
-  margin: 0;
-  padding:0;
-  box-sizing: border-box;
-  font-family: "Poppins";
-}
-html{
-  font-size: 65.2%;
-}
-
-body{
-  background-color: var(--mainColor);
-  
-}
-
-
-
-.contoner-produit{
-  position: fixed;
-  
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.808);
-  bottom: 0%;
-}
-#ajouterProduit{
- /* position: absolute; */
- width: 50%;
- height: 90vh;
- font-size: rem;
- padding: 2%;
- border-radius: 5%;
- display: flex;
- flex-direction: column;
- justify-content: space-evenly;
- align-items: center;
- margin-left: 20%;
- margin-top: 5%;
- background: white;
-}
-
-.config{
-  background-color: white;
-  width: 80%;
-  
-  /* border-style: dashed; */
-  /* border-style: dashed; */
-
-}
-.input-parts{
-  border: 1px solid black;
-  
-  width: 70%;
-  padding: 1%;
-  font-size: 1.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  
-  color: rgb(43, 43, 43);
- 
-  
-  
-}
- .cotoner-child{
-  /* border: 1px solid black; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1%;
-  font-size: 1.7rem;
-  text-align: center;
-  font-weight: 700;
-}
-.save{
-  width: 90%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+    --mainColor: #E8EFF9;
+    --premierColor: #744EF9;
+    --secondColor: #5D78FF;
+    --ThirdColor: #C4C4C4;  
   }
-.save button{
-  width: 110px;
-  height: 40px;
-  font-weight: 700;
-  margin-top: 5%;
-  border-radius: 10px;
   
   
-}
-#ajouter{
-  background-color: #5D78FF;
-}
+  *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+  }
+  html{
+    font-size: 65.2%;
+  }
+  
+  body{
+    background-color: var(--mainColor);
+  
+  }
+  .disktop .current-J a{
+    color: #000 !important;
+   border-bottom: 4px solid #F4FAF9 !important; 
+    background-color: white;
+    padding: 24px 15px;
+  
+  }
+  
+  
+  
+  
+  .contoner-produit{
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.808);
+    bottom: 0%;
+  }
+  #ajouterProduit{
+   position: relative;
+   width: 60vw;
+   /* height: 100%; */
+   font-size: 1.5rem;
+   padding: 5%;
+   /* padding-top: %; */
+   border-radius: 5%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   /* margin-left: 20%; */
+   margin-top: 8%;
+   left: 20%;
+  
+  
+   background: white;
+  }
+  
+  .config{
+    background-color: white;
+    width: 90%;
+    
+    /* border-style: dashed; */
+    /* border-style: dashed; */
+  
+  }
+  .input-parts{
+    border: 1px solid black;
+    
+    width: 70%;
+    padding: 1.5%;
+    font-size: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    color: rgb(43, 43, 43);
+   
+    
+    
+  }
+   .cotoner-child{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2%;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  .save{
+  
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    justify-content: space-evenly;
+  
+    }
+  .save button{
+    width: 25%;
+    height: 40px;
+    font-weight: 700;
+    margin-top: 5%;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    
+    
+  }
+  #ajouter {
+    background-color: #5D78FF;
+  }
+  @media screen and (max-width: 600px) {
+    html{
+        font-size: 55.2%;
+      }
+      .icon-menu{
+        display: block;
+        margin-top: 15px;
+        margin-right: 15px;
+      }
+      .container_mobile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 60px;
+      }
+      .header-bar{
+        display: flex;
+        flex-direction: column;
+      }
+      .search{
+        width: 80%;
+        margin-top: 10px;
+      }
+      .logo{
+        margin:10px;
+      }
+      .search{
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 80%;
+      }
+      
+      
+    .name{
+      margin-left: 0;
+     
+    }
+    .name p{
+      font-size: 14px;
+      align-items: center;
+    }
+    .name p:nth-child(2){
+      color: var(--ThirdColor);
+    }
+    
+    .topnav{
+      display: none !important;
+    }
+    .disktop{
+      display: none;
+    }
+    .mobile {
+      
+      display: block;
+      width: 100%;
+    }
+    .mobile ul {
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .mobile ul li {
+      background-color: #fff;
+      margin-top: 10px;
+      width: 50%;
+      padding: 8px;
+      border-radius: 20px;
+      text-align: center;   
+    }
+    .mobile ul li a{
+      font-size: 14px;
+      color: #000 !important;
+    }
+    
+    .nav-container ul li a:hover{
+      color:var(--secondColor)
+    }
+    .container {
+      background-color: var(--premierColor);
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+    
+    
+     .current {
+      background-color: var(--ThirdColor) !important;
+     
+    
+    }
+    
+    .profil-pic img{
+      width: 70px;
+    }
+    .category::-webkit-scrollbar {
+      display: none;
+    }
+    #ajouterProduit{
+        position: relative;
+        width: 80vw;
+        height: 100%;
+        left:10% ;
+    }
+    .save button{
+    
+     height: 30px;
+     font-weight: 700;
+     margin-top: 5%;
+     border-radius: 10px;
+     font-size: 1.2rem;
+     
+   }}
+   @media screen and (max-width: 450px) {
+     html{
+      font-size:45.5%;
+     }
+     #ajouterProduit{
+
+        padding: 5%;
+        border-radius: 5%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 90%;
+        left: 5%;
+    }
+    .save button{
+    
+        width: 35%;
+        height: 33px;
+     
+   }
+   .save{
+    margin-top: 10%;
+    justify-content: space-around;
+   }
+   .cotoner-child{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2%;
+    font-size: 1.6rem;
+    text-align: left;
+    font-weight: 600;
+    height: 70px;
+   }
+   .input-parts{
+       width: 100%;
+   }
+    }
