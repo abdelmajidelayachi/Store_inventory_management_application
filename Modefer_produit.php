@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['g'])) {
+  header('location:login/connexion.php');
+}
+?>
+<?php
 require_once 'page.php';
 
 
@@ -36,7 +42,7 @@ if (
   $query->bindParam(':Id', $userid, PDO::PARAM_STR);
 
   $query->execute();
-  // echo "<script>alert('Vous avez modifier un produit')</script>";
+   echo "<script>alert('Vous avez modifier un produit')</script>";
   echo "<script>window.location.href='category.php'</script>";
 }
 ?>
@@ -76,7 +82,7 @@ if (
 
             <!-- <div class="cotoner-child">
               <label>Image :</label>
-              <input class="input-parts" type="file" class="form-control mt-3" name="profil" accept="*/image" value="<?php echo $row->images ?>">
+              <input class="input-parts" type="file" class="form-control mt-3" name="profil" accept="*/image" value="<php echo $row->images ?>">
             </div> -->
 
             <div class="cotoner-child">
