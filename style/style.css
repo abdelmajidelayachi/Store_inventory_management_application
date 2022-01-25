@@ -199,13 +199,14 @@ html{
    
 }
 
+
 .box_{
   width: 100%;
   background-color: white;
-  height: 300px;
+  height: 350px;
   margin-top: 20px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
   
 }
 .box_ div{
@@ -218,8 +219,8 @@ html{
 }
 
 .box--img img{
-  width: 300px;
-  max-height: 270px;
+  width: 280px;
+  max-height: 250px;
 }
 .name-cate p {
   color: #744EF9;
@@ -282,7 +283,7 @@ html{
   display: flex;
   flex-direction: column;
   width: 380px;
-  height: 480px;
+  height: 600px !important;
   background-color:rgb(255, 255, 255);
   padding-top: 20px;
   position: relative;
@@ -550,22 +551,41 @@ body{
     grid-template-columns: auto  auto  ;
 
   } */
+  
   .chiffre {
     display: flex;
     flex-direction: column;
   }
   .chiffre div{
+    margin: auto;
     margin-bottom: 10px;
-    width: 100%;
+    width: 90%;
+   
+  }
+  .chiffre div h1 ,  .chiffre div p{
+    font-size: 1.4rem;
   }
   .cat-class{
     display: grid;
-    grid-template-columns: auto  ;
-    width: 95%;
+    grid-template-columns: auto !important ;
+    width: 100%;
     margin-top: 20px;
     margin: 20px auto; 
     justify-content: space-around; 
      
+  }
+  .box_{
+    width: 90%;
+    background-color: white;
+    height: 379px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 45px;
+  }
+  .box--img img{
+    width: 220px;
+    max-height: 200px;
   }
 
   /* .img-box{
@@ -573,7 +593,7 @@ body{
   } */
 }
 @media screen and (max-width : 450px){
-  .category-box{
+  .cat-class {
     display: grid;
     grid-template-columns: auto ;
   

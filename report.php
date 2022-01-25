@@ -42,7 +42,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <?php 
         
         
-        
+        if(sizeof($row)>0){
         foreach($row as $i=>$values){           
          $arr[$i]= $values['Category'];
         }
@@ -54,20 +54,41 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         ?>
   <main>
     <!-- write code here   -->
-    <div class="chiffre">
-      <div class="gain-jour">
-        <h3>Les gains du jour</h3>
-        <p>2000,500 DH</p>
-      </div>
-      <div class="gain-mois">
-        <h3>Return de mois</h3>
-        <p>12.000,300 DH</p>
-      </div>
-      <div class="total-gain">
-        <h3>Total Sales de mois</h3>
-        <p>60.980,110 DH</p>
-      </div>
-    </div>
+    <?php
+
+$stmt_b = $pdo->query('SELECT*FROM produit');
+$row_b = $stmt_b->fetchAll(PDO::FETCH_ASSOC);
+
+
+$prix_total = 0;
+if(sizeof($row_b)>0){
+foreach ($row_b as $i => $values) {
+  $arr_b[$i] = $values['Category'];
+  $prod_num[] = $values['Marque'];
+  $prix_total = $prix_total + $values['Quantity'] * $values['Prix'];
+}
+$arr_b = array_unique($arr_b);
+
+?>
+
+
+<!-- write code here   -->
+<div class="chiffre">
+  <div class="gain-jour">
+    <h1>Nombre des catégorie</h1>
+    <p><?php echo sizeof($arr_b); ?></p>
+  </div>
+  <div class="gain-mois">
+    <h1>Nombre des produits</h1>
+    <p><?php echo sizeof($prod_num); ?></p>
+  </div>
+  <div class="total-gain">
+    <h1>Total de montants au store</h1>
+    <p><?php echo $prix_total; ?> DH</p>
+  </div>
+</div>
+
+<?php }?>
 
 
     <div class="text">
@@ -108,12 +129,13 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <tr>
             <th>Nom de produit</th>
 
-            <th>Ventes</th>
+            <th>color</th>
             <th>Stock</th>
-            <th>Date</th>
+            <th>Opération</th>
           </tr>
           <?php
           $resul = $pdo->query("SELECT * FROM produit WHERE Category LIKE '" . $cat_element . "' ");
+         
           while ($row_cat = $resul->fetch(PDO::FETCH_ASSOC)) {
 
 
@@ -121,7 +143,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             <tr>
               <td><?php echo $row_cat['Marque']; ?></td>
-              <td>3</td>
+              <td><?php echo $row_cat['Color']; ?></td>
               <td><?php echo $row_cat['Quantity']; ?></td>
 
               <td>2/1/2022</td>
@@ -130,7 +152,7 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </table>
 
     <?php }
-    } ?>
+    }} ?>
 
 
 

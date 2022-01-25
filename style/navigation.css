@@ -40,7 +40,7 @@ html{
 }
 .search{
   margin-top: 20px;
-  width: 100%;
+  width: 30%;
 }
 .searchbar {
   width: 100%;
@@ -71,7 +71,7 @@ html{
 }
 
 .searchbar__button {
-  width: 40px;
+  width: 60px;
   background: var(--premierColor);
   color: #ffffff;
   outline: none;
@@ -201,6 +201,7 @@ body{
 }
 
 @media screen and (max-width: 800px) {
+  
   .search-container{
     width: 95%;
   }
@@ -258,7 +259,9 @@ body{
   align-items: center;
 }
 .name p:nth-child(2){
-  color: var(--ThirdColor);
+  color: var(--ThirdColor) !important;
+  
+
 }
 
 .topnav{

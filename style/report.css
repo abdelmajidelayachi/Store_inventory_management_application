@@ -20,7 +20,7 @@ body {
 }
 
 /* disktop */
-.chiffre {
+/* .chiffre {
   position: relative;
   background-color: #fff;
   display: flex;
@@ -29,14 +29,14 @@ body {
   justify-content: center;
   margin-top: 50px;
   left: 5%;
-  /* top: 10%; */
+  /* top: 10%; 
   text-align: center;
-}
+} */
 h3{
   font-size: 2rem;
   padding: 2%;
 }
-.chiffre div {
+/* .chiffre div {
   padding: 10px;
   width: 30%;
 }
@@ -49,7 +49,7 @@ h3{
 .gain-jour,
 .gain-mois {
   border-right: 1px solid var(--ThirdColor);
-}
+} */
 .main-jour h3{
   font-size: 5rem;
 }
@@ -63,7 +63,7 @@ th {
   border: 1px solid black;
   text-align: center;
   padding: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 
 }
 td{
@@ -98,7 +98,41 @@ th {
   width: 90%;
 }
 
+.chiffre { 
+  display: flex;
+  width: 90%;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+
+}
+.chiffre div {
+  padding: 10px;
+  width: 30%;
+  background-color: #fff;
+}
+.chiffre div p{
+  font-size: 2rem;
+  color: var(--premierColor);
+  font-weight: 800;
+}
+
+.gain-jour,
+.gain-mois {
+  border-right: 1px solid var(--ThirdColor);
+}
 /* responsive  */
+@media screen and (max-width : 1000px){
+  .chiffre div h3{
+    font-size: 15px;
+
+  }
+}
+
 @media screen and (max-width: 800px) {
   .icon-menu {
     display: block;
@@ -196,28 +230,65 @@ th {
 
 }
 }
+@media screen and (max-width : 600px){
+  /* .category-box{
+    display: grid;
+    grid-template-columns: auto  auto  ;
+
+  } */
+  
+  .chiffre {
+    display: flex;
+    flex-direction: column;
+    
+      width: 93%;
+      margin: auto;
+      margin-top: 30px;
+      left: 0;
+  
+  }
+  .chiffre div{
+    margin-bottom: 20px;
+    width: 100%;
+  }}
 @media screen and (max-width: 500px){
   
-  .chiffre{
-    width: 100%;
-    left: 0;
-  }
+  
   h3 {
     font-size: 1.5rem;
     width: 100%;
 }
 .chiffre div p {
+  font-size: 2.4rem;
+  color: var(--premierColor);
+  font-weight: 600;
+}
+.head-table th {
+  background-color: var(--secondColor);
   font-size: 1.5rem;
+}
+.text p{
+font-size: 1.3rem;
+
+}
+
+
+}
+@media screen and (max-width: 500px){
+
+ .chiffre div h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+ .chiffre div p {
+  font-size: 1.7rem;
   color: var(--premierColor);
   font-weight: 600;
 }
 
-
-
-
-
-
-
+tr th, tr td{
+  font-size: 12px;
+}
 
 
 

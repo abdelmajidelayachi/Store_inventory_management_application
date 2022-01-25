@@ -58,7 +58,7 @@ $id = 0;
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Category</title>
-  <link rel="stylesheet" href="style/report.css">
+  <link rel="stylesheet" href="style/category.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,800;1,300;1,400;1,700&display=swap');
     .disktop .current-category a{
@@ -79,7 +79,7 @@ $id = 0;
     <ul>
       <li class="current-cat"><a href="category.php">Toutes</a></li>
       <?php
-
+   if(sizeof($row_b)>0){
       foreach ($row_b as $i => $values) {
         $arr_b[$i] = $values['Category'];
       }
@@ -159,10 +159,10 @@ $id = 0;
 
       <br>
   <?php }
- } else
-    // echo "<h3><aucune produit</h3>"
+ }} else
+     echo "<h3><aucune produit</h3>"
   
-   ?>
+  ?>
 
 
 

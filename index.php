@@ -41,6 +41,7 @@ require_once('page.php');
 
 
     $prix_total = 0;
+    if(sizeof($row_b)>0){
     foreach ($row_b as $i => $values) {
       $arr_b[$i] = $values['Category'];
       $prod_num[] = $values['Marque'];
@@ -50,7 +51,7 @@ require_once('page.php');
 
     ?>
 
-    ?>
+    
     <!-- write code here   -->
     <div class="chiffre">
       <div class="gain-jour">
@@ -88,6 +89,7 @@ require_once('page.php');
               
       
     </div>
+    <?php } ?>
     <!-- 
         $count=0;
         

@@ -12,7 +12,7 @@ if(!isset($_SESSION['g'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/category.css">
+    <link rel="stylesheet" href="style/navigation.css">
     <title>Document</title>
 </head>
 <body>
@@ -24,7 +24,7 @@ if(!isset($_SESSION['g'])){
         </div>
         <div class="three_bars">
           <a href="javascript:void(0);" class="icon-menu" onclick="responsive()">
-            <i class="fa fa-bars fa-2x"></i>
+            <i class="fa fa-bars fa-3x"></i>
           </a>
         </div>
       </div>

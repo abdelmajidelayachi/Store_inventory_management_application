@@ -83,6 +83,7 @@ if(!isset($_SESSION['g'])){
 
     <!-- header -->
     <?php require_once 'nav-bar.php'; ?>
+    
     <div id="form">
         <section id="sect-01" style="display:blok;">
             <div id="ajouterProduit">
