@@ -190,23 +190,24 @@ html{
 
 
 .cat-class{
-  display: grid;
-  grid-template-columns: auto auto auto auto  ;
+  display: flex !important;
+  flex-wrap: wrap !important;
   width: 95%;
   margin-top: 20px;
   margin: 20px auto; 
-  justify-content: space-around; 
+  
    
 }
 
 
 .box_{
-  width: 100%;
+  width: 300px;
   background-color: white;
   height: 350px;
   margin-top: 20px;
   border-radius: 10px;
   padding: 20px;
+  margin-left: 2%;
   
 }
 .box_ div{
@@ -255,16 +256,7 @@ html{
 .gain-mois {
   border-right: 1px solid var(--ThirdColor);
 }
-/* .box P{
 
- text-align: center;
- background-color: rgba(255, 255, 255, 0.61);
- height: 10vh;
- font-size:20px;
- padding-top: 20px;
- width: 90%;
- 
-} */
 .container-table th{padding: 3%;}
 .sign-in{
   font-size: 18px;
@@ -406,46 +398,20 @@ body{
 
 
 /* responsive  */
-@media screen and (max-width : 1300px){
 
-  .cat-class{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    width: 95%;
-    margin-top: 20px;
-    margin: 20px auto; 
-    justify-content: space-around; 
-     
-  }
-}
+
 @media screen and (max-width : 1000px){
   .chiffre div h3{
     font-size: 15px;
 
   }
-  .cat-class{
-    display: grid;
-    grid-template-columns: auto auto ;
-    width: 95%;
-    margin-top: 20px;
-    margin: 20px auto; 
-    justify-content: space-around; 
-     
-  }
+
 }
 @media screen and (max-width: 800px) {
   .search-container{
     width: 95%;
   }
-  .cat-class{
-    display: grid;
-    grid-template-columns: auto auto ;
-    width: 95%;
-    margin-top: 20px;
-    margin: 20px auto; 
-    justify-content: space-around; 
-     
-  }
+ 
   .icon-menu{
     display: block;
     margin-top: 15px;
@@ -546,12 +512,7 @@ body{
 } */
 }
 @media screen and (max-width : 600px){
-  /* .category-box{
-    display: grid;
-    grid-template-columns: auto  auto  ;
-
-  } */
-  
+ 
   .chiffre {
     display: flex;
     flex-direction: column;
@@ -565,24 +526,7 @@ body{
   .chiffre div h1 ,  .chiffre div p{
     font-size: 1.4rem;
   }
-  .cat-class{
-    display: grid;
-    grid-template-columns: auto !important ;
-    width: 100%;
-    margin-top: 20px;
-    margin: 20px auto; 
-    justify-content: space-around; 
-     
-  }
-  .box_{
-    width: 90%;
-    background-color: white;
-    height: 379px;
-    margin: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-    padding: 45px;
-  }
+ 
   .box--img img{
     width: 220px;
     max-height: 200px;
@@ -592,12 +536,11 @@ body{
     height: 20vh;
   } */
 }
-@media screen and (max-width : 450px){
+/* @media screen and (max-width : 450px){
   .cat-class {
-    display: grid;
-    grid-template-columns: auto ;
+    
   
   }
   
  
-}
+} */

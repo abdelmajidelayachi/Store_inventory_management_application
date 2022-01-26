@@ -77,12 +77,12 @@ require_once('page.php');
 
       ?>
 
-        <div class="box_">
+        <div class="box_"><a href="category.php#<?php echo $value; ?>" style="text-decoration: none; ">
           
           <div class="box--img"><img src="./uploads/<?php echo $row_c['images']; ?>" alt="Machine a laver" id="cat1"></div>
           <div class="name-cate">
             <p><?php echo $value; ?></p>
-          </div>
+          </div></a>
 
         </div>
       <?php } ?>

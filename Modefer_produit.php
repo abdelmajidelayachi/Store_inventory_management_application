@@ -112,8 +112,8 @@ if (
             </div>
             <div class="save">
 
-              <button id="retour">Retour</button>
-              <button id="ajouter" name="updatebtn">Modefer</button>
+              <a href="category.php" style = "text-decoration:none;"><button id="retour">Retour</button></a>
+              <button id="ajouter" name="updatebtn">Modifier</button>
 
             </div>
 

@@ -49,8 +49,6 @@ $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         
       $arr=array_unique($arr);
-
-        
         ?>
   <main>
     <!-- write code here   -->

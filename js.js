@@ -18,15 +18,18 @@ function responsive() {
 
 
 
-  var affichage = document.querySelectorAll('.ident');
+  //var affichage = document.querySelectorAll('.ident');
 
-  function afichage_over(obj, id) {
-    affichage[id].className = ' ident frame'
+  function affichage_over(id) {
+    let affich = document.getElementById(id);
+    affich.className = 'ident frame';
+   
 
   }
 
-  function afichage_out(obj, id) {
-    affichage[id].className += ' afichage'
+  function affichage_out(id) {
+    let affich= document.getElementById(id);
+    affich.className = 'afichage';
   }
 
 
