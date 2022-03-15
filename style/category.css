@@ -262,7 +262,8 @@ body{
     font-weight: 700;
     margin-top: 5%;
     border-radius: 10px;
-  
+  border: none;
+  outline: none;
   
 }
 #Modifier{
@@ -326,9 +327,12 @@ body{
   
   color: rgb(43, 43, 43);
  
-  
-  
 }
+button {
+  border: none;
+  outline: none;
+}
+
  .cotoner-child{
   /* border: 1px solid black; */
   display: flex;
@@ -359,6 +363,10 @@ body{
 }
 #ajouter {
   background-color: #5D78FF;
+}
+
+button:hover{
+  cursor: pointer;
 }
 
 /* responsive  */

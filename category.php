@@ -1,5 +1,6 @@
   <?php
   session_start();
+  
   if (!isset($_SESSION['g'])) {
     header('location:login/connexion.php');
   }
@@ -25,11 +26,6 @@
   $stmt_b = $pdo->query('SELECT*FROM produit');
   $row_b = $stmt_b->fetchAll(PDO::FETCH_ASSOC);
 
-
-
-
-
-
   if (isset($_REQUEST['del'])) {
     $sup = intval($_GET['del']);
     $sql = "DELETE FROM produit WHERE Id=:Id ";
@@ -43,8 +39,6 @@
   $index = 0;
   $id = 0;
   ?>
-
-
 
 
   <!DOCTYPE html>
@@ -111,25 +105,15 @@
 
               while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
-                // 
-
                 $arr[$count_cate] = $row['Category'];
 
                 $countcate++;
               }
               $cate = array_unique($arr);
 
-
               foreach ($cate as $cat_element) {
 
-
-
       ?>
-
-
-
-
-
           <section class="category" id="caty1" id="<?php echo $cat_element; ?>"><a name="<?php echo $cat_element; ?>">
               <?php
                 $resul = $pdo->query("SELECT * FROM produit WHERE Category LIKE '" . $cat_element . "' ");

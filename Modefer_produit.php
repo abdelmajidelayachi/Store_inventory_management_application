@@ -2,13 +2,16 @@
 session_start();
 if (!isset($_SESSION['g'])) {
   header('location:login/connexion.php');
+
 }
 ?>
 <?php
 require_once 'page.php';
 
 
-
+if( isset($_POST['retour'])){
+  header('location:category.php');
+}
 
 if (
   isset($_POST['updatebtn'])
@@ -112,7 +115,7 @@ if (
             </div>
             <div class="save">
 
-              <a href="category.php" style = "text-decoration:none;"><button id="retour">Retour</button></a>
+              <button type="submit" name='retour' id="retour">Retour</button>
               <button id="ajouter" name="updatebtn">Modifier</button>
 
             </div>

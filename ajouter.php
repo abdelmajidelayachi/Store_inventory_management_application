@@ -45,6 +45,13 @@ if (
     $stmt->bindValue(':Prix', $Prix);
 
     $stmt->execute();
+    
+}
+if (
+    isset($_POST['retour'])
+   
+) {
+    header('location:category.php');
 }
 
 
@@ -96,20 +103,20 @@ if(!isset($_SESSION['g'])){
 
                     <div class="cotoner-child">
                         <label>Category :</label>
-                        <input class="input-parts" type="text" name="Category" id="category" required>
+                        <input class="input-parts" type="text" name="Category" id="category" >
                     </div>
                     <div class="cotoner-child">
                         <label>Marque :</label>
-                        <input class="input-parts" type="text" name="Marque" id="marque" required>
+                        <input class="input-parts" type="text" name="Marque" id="marque" >
                     </div>
                     <div class="cotoner-child">
                         <label>Color :</label>
 
-                        <input class="input-parts" type="text" name="Color" id="color" required>
+                        <input class="input-parts" type="text" name="Color" id="color" >
                     </div>
                     <div class="cotoner-child">
                         <label>Quantity :</label>
-                        <input class="input-parts" type="number" name="Quantity" id="quantity" min="1" required>
+                        <input class="input-parts" type="number" name="Quantity" id="quantity" min="1" >
                     </div>
                     <div class="cotoner-child">
                         <label>Prix :</label>
@@ -117,7 +124,7 @@ if(!isset($_SESSION['g'])){
                     </div>
                     <div class="save">
                         
-                        <button id="retour">Retour</button>
+                        <button type="submit" name="retour" id="retour">Retour</button>
                         <button type="submit" class="btn btn-primary mt-3" name="ajouter" id="ajouter">Enregistrer</button>
                     </div>
                 </form>

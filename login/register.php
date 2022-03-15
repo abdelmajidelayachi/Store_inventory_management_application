@@ -19,9 +19,9 @@
       echo "<script>alert('CIN est déja exist')</script>";
       header("location:connexion.php");
     }else{
-      echo "<script>alert('Votre compte a etait crée')</script>";
       $reg= "INSERT INTO `employe` (`ID`, `USER`, `CIN`, `PASSWORD`) VALUES (NULL, '".$uName."', '".$cin."', '".$password_."')";
       mysqli_query($conn,$reg);
+      echo "<script>alert('Votre compte a etait crée 😊')</script>";
       header("location:connexion.php");
     } 
   }elseif(isset($_POST['register-btn'])){
