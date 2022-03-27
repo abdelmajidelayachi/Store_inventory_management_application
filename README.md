@@ -38,7 +38,7 @@ Phase 4: Creation of the database
 Manipulate and test SQL queries on PHPMyAdmin
 Create the database from the design provided for the MySQL DBMS.
 
--Phase 5: Back-end development
+- Phase 5: Back-end development
 
 Research on PHP
 With the help of the documentation, create a .php page that returns a form and inserts it into a MySQL database
