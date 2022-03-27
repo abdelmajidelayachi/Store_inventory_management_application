@@ -3,6 +3,7 @@
 
 
 ** Project context
+
 The ShopNow company has a store and records the stock information in paper format until now. ShopNow wants to digitize inventory management to make work easier for its employees and to have a useful platform for remote access.
 
 ​
@@ -33,12 +34,13 @@ Implement application interfaces
 Bonus: Implement form field validation with Javascript (Regex)
 Phase 4: Creation of the database
 
-- Search on SQL
+ Search on SQL
 Manipulate and test SQL queries on PHPMyAdmin
 Create the database from the design provided for the MySQL DBMS.
-Phase 5: Back-end development
 
-- Research on PHP
+-Phase 5: Back-end development
+
+Research on PHP
 With the help of the documentation, create a .php page that returns a form and inserts it into a MySQL database
 Implement backend logic with PHP and integrate with front-end.
 Realize the CRUD of the application
